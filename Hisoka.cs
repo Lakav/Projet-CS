@@ -10,5 +10,6 @@ namespace Project_CS
             this.Health = 200;
             this.Nen = 5;
         }
+        
     }
 }
