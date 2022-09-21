@@ -11,6 +11,7 @@ namespace Project_CS
         private int _nen;
         private int _dodge;
         private string _name;
+        private int _money = 20;
 
         public int Health
         {
@@ -40,6 +41,12 @@ namespace Project_CS
         {
             get { return _name; }
             set { _name = value; }
+        }
+
+        public int Money
+        {
+            get { return _money; }
+            set { _money = value; }
         }
     }
 }
