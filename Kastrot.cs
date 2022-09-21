@@ -5,10 +5,10 @@ namespace Project_CS
         public void kastrot()
         {
             this.Name = "Kastrot";
-            this.Powerfull = 12;
+            this.Powerfull = 11;
             this.Dodge = 15;
-            this.Health = 100;
-            this.Nen = 0;
+            this.Health = 110;
+            this.Nen = 3;
         }
     }
 }

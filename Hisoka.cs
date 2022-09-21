@@ -5,10 +5,10 @@ namespace Project_CS
         public void hisoka()
         {
             this.Name = "hisoka";
-            this.Powerfull = 12;
-            this.Dodge = 15;
-            this.Health = 100;
-            this.Nen = 0;
+            this.Powerfull = 15;
+            this.Dodge = 35;
+            this.Health = 200;
+            this.Nen = 5;
         }
     }
 }

@@ -5,10 +5,10 @@ namespace Project_CS
         public void kuroro()
         {
             this.Name = "Kuroro";
-            this.Powerfull = 12;
-            this.Dodge = 15;
-            this.Health = 100;
-            this.Nen = 0;
+            this.Powerfull = 11;
+            this.Dodge = 20;
+            this.Health = 160;
+            this.Nen = 2;
         }
     }
 }

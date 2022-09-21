@@ -5,8 +5,8 @@ namespace Project_CS
         public void kirua()
         {
             this.Name = "Kirua";
-            this.Powerfull = 12;
-            this.Dodge = 15;
+            this.Powerfull = 9;
+            this.Dodge = 20;
             this.Health = 100;
             this.Nen = 0;
         }
