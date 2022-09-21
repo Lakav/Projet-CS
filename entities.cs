@@ -5,17 +5,41 @@ namespace Project_CS
 {
     public class Entities
     {
-        public int health { get; set; } = 0;
-        public int powerfull { get; set; }
-        public int dodge { get; set; }
-        public int Nen { get; set; } = 0;
 
-        public Entities(int _health, int _powerfull, int _dodge, int _nen)
+        private int _health;
+        private int _powerfull;
+        private int _nen;
+        private int _dodge;
+        private string _name;
+
+        public int Health
         {
-            health = _health;
-            powerfull = _powerfull;
-            dodge = _dodge;
-            Nen = _nen;
+            get { return _health; }
+            set { _health = value; }
+        }
+
+        public int Powerfull
+        {
+            get { return _powerfull; }
+            set { _powerfull = value; }
+        }
+
+        public int Nen
+        {
+            get { return _nen; }
+            set { _nen = value; }
+        }
+
+        public int Dodge
+        {
+            get { return _dodge; }
+            set { _dodge = value; }
+        }
+
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
         }
     }
 }
