@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Content Include=".git\COMMIT_EDITMSG" />
+      <Content Include=".git\config" />
+      <Content Include=".git\description" />
+      <Content Include=".git\HEAD" />
+      <Content Include=".git\hooks\applypatch-msg.sample" />
+      <Content Include=".git\hooks\commit-msg.sample" />
+      <Content Include=".git\hooks\fsmonitor-watchman.sample" />
+      <Content Include=".git\hooks\post-update.sample" />
+      <Content Include=".git\hooks\pre-applypatch.sample" />
+      <Content Include=".git\hooks\pre-commit.sample" />
+      <Content Include=".git\hooks\pre-merge-commit.sample" />
+      <Content Include=".git\hooks\pre-push.sample" />
+      <Content Include=".git\hooks\pre-rebase.sample" />
+      <Content Include=".git\hooks\pre-receive.sample" />
+      <Content Include=".git\hooks\prepare-commit-msg.sample" />
+      <Content Include=".git\hooks\push-to-checkout.sample" />
+      <Content Include=".git\hooks\update.sample" />
+      <Content Include=".git\index" />
+      <Content Include=".git\info\exclude" />
+      <Content Include=".git\logs\HEAD" />
+      <Content Include=".git\logs\refs\heads\master" />
+      <Content Include=".git\logs\refs\remotes\origin\master" />
+      <Content Include=".git\objects\00\4e064f6ed074c8be27f6f762106fbbad2e8465" />
+      <Content Include=".git\objects\1d\2d39a9ef4db524862774d3bf067e0532e99f0d" />
+      <Content Include=".git\objects\27\157b9f4a32ce53c71c7d573eb7717e2ff05e31" />
+      <Content Include=".git\objects\35\eb1ddfbbc029bcab630581847471d7f238ec53" />
+      <Content Include=".git\objects\47\200554e02d247b852c1a40b43765ca4ae57330" />
+      <Content Include=".git\objects\4f\7046c8a46cf3cabb0d4aca92452b725f2973e0" />
+      <Content Include=".git\objects\53\6c3f4a81b35f8907441cad769978125fc4d1fb" />
+      <Content Include=".git\objects\5c\9546c831f6f7de6c73e2f88c144208903562a0" />
+      <Content Include=".git\objects\68\cd1cd57ff96e7ff23a13a3a4456ce34b844f6f" />
+      <Content Include=".git\objects\7b\08163cebc50fb3e777eea4881b68fcebc10590" />
+      <Content Include=".git\objects\bc\10863a48f901fabdc65e8bc6fe0b36cdf52e1a" />
+      <Content Include=".git\objects\d1\6bd1d1523edd024ee2f32b005725eeb0709982" />
+      <Content Include=".git\objects\df\87cf951fb4858ab7a76b68dd479c98b2df2404" />
+      <Content Include=".git\objects\e6\9de29bb2d1d6434b8b29ae775ad8c2e48c5391" />
+      <Content Include=".git\objects\f9\3e3a1a1525fb5b91020da86e44810c87a2d7bc" />
+      <Content Include=".git\refs\heads\master" />
+      <Content Include=".git\refs\remotes\origin\master" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include=".git\objects\info" />
+      <Folder Include=".git\objects\pack" />
+      <Folder Include=".git\refs\tags" />
+    </ItemGroup>
+
+</Project>
