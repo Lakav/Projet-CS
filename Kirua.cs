@@ -1,3 +1,4 @@
+using System;
 namespace Project_CS
 {
     public class Kirua : Entities
@@ -9,6 +10,11 @@ namespace Project_CS
             this.Dodge = 20;
             this.Health = 100;
             this.Nen = 0;
+        }
+        public void printStatsKirua()
+        {
+            Console.WriteLine($"{Name} a une puissance de {Powerfull}, une esquive de {Dodge}, {Health} poits de vie et" +
+                              $" un Nen a {Nen}");
         }
     }
     
