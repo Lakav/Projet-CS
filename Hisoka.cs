@@ -1,7 +1,7 @@
 using System;
 namespace Project_CS
 {
-    public class Hisoka : Entities
+    public class Hisoka : Ennemies
     {
         public new void Character()
         {

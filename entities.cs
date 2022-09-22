@@ -66,7 +66,7 @@ namespace Project_CS
             this.Nen = 0;
             this.Crit = 0;
         }
-        public void printStatsGon()
+        public void printStats()
         {
             Console.WriteLine($"{Name} a une puissance de {Powerfull}, une esquive de {Dodge}, {Health} poits de vie et" +
                               $" un Nen a {Nen}");
@@ -100,16 +100,6 @@ namespace Project_CS
             {
                 Console.WriteLine("just a hit");
             }
-        }
-
-        public void HitRange()
-        {
-            
-            int max = Powerfull + 4;
-            int min = Powerfull - 4;
-            Random hRange = new Random();
-            int HR = hRange.Next(min, max);
-            Console.WriteLine($"- {HR}");
         }
 
     }

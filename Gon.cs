@@ -1,8 +1,6 @@
-using System;
-
 namespace Project_CS
 {
-    public class Gon : Entities
+    public class Gon : Ally
     {
         public new void Character()
         {

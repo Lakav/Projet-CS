@@ -1,11 +1,12 @@
 using System;
+
 namespace Project_CS
 {
-    public class Ennemies : Entities
+    public class Ally : Entities
     {
-        public void Ennemy()
+        public void AllyCharacter()
         {
-            Name = "Ennemy";
+            Name = "Ally";
             Powerfull = 0;
             Dodge = 0;
             Health = 0;
@@ -13,16 +14,14 @@ namespace Project_CS
             Crit = 0;
         }
         
-        public void EnnemyAttack(Ally ally)
+        public void AllyAttack(Ennemies ennemy)
         {
-            
             int max = Powerfull + 4;
             int min = Powerfull - 4;
             Random hRange = new Random();
             int HR = hRange.Next(min, max);
-            Console.WriteLine($"- {HR}");
-            ally.Health -= HR;
-            if (ally.Health <= 0)
+            ennemy.Health -= HR;
+            if (ennemy.Health <= 0)
             {
                 
                 Console.WriteLine("You'r is dead...");
