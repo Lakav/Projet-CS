@@ -32,5 +32,14 @@ namespace Project_CS
                 Console.WriteLine("You haven't dodged");
             }
         }
+        public void HitRange()
+        {
+            
+            int max = Powerfull + 8;
+            int min = Powerfull - 8;
+            Random hRange = new Random();
+            int HR = hRange.Next(min, max);
+            Console.WriteLine($"- {HR}");
+        }
     }
 }
