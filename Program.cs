@@ -11,8 +11,10 @@ namespace Project_CS
             //fight.Fight(); */
             Gon gon = new Gon();
             gon.gon();
-            gon.ChDodge();
+            gon.HitRange();
+            gon.Cc();
             
+           
             
         }
     }

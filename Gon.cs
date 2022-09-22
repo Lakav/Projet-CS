@@ -22,7 +22,6 @@ namespace Project_CS
 
         public void ChDodge()
         {
-            Console.WriteLine(Name);
             Random dodge = new Random();
             int chance = dodge.Next(0, 100);
             
@@ -38,7 +37,6 @@ namespace Project_CS
 
         public void Cc()
         {
-            Console.WriteLine(Name);
             Random crit = new Random();
             int chance = crit.Next(0, 100);
 
@@ -51,8 +49,18 @@ namespace Project_CS
             {
                 Console.WriteLine("just a hit");
             }
-
         }
+
+        public void HitRange()
+        {
+            
+            int max = Powerfull + 4;
+            int min = Powerfull - 4;
+            Random hRange = new Random();
+            int HR = hRange.Next(min, max);
+            Console.WriteLine($"- {HR}");
+        }
+
 
     }
     
