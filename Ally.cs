@@ -20,11 +20,12 @@ namespace Project_CS
             int min = Powerfull - 4;
             Random hRange = new Random();
             int HR = hRange.Next(min, max);
+            Console.WriteLine($"- {HR}");
             ennemy.Health -= HR;
             if (ennemy.Health <= 0)
             {
                 
-                Console.WriteLine("You'r is dead...");
+                Console.WriteLine("He's dead...");
                 Environment.Exit(0);
             }
       

@@ -25,7 +25,7 @@ namespace Project_CS
             if (ally.Health <= 0)
             {
                 
-                Console.WriteLine("You'r is dead...");
+                Console.WriteLine("You'r dead!");
                 Environment.Exit(0);
             }
       
