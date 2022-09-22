@@ -7,12 +7,21 @@ namespace Project_CS
     {
         static void Main(string[] args)
         {
-            //Battle fight = new Battle();
+            /*//Battle fight = new Battle();
             //fight.Fight();
 
-            Gon pute = new Gon();
+           
             pute.gon();
             pute.printStatsGon();
+            */
+            Gon gon = new Gon();
+            gon.gon();
+            gon.ChDodge();
+            
+            
         }
     }
+
+    
+
 }

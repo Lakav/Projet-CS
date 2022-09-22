@@ -48,5 +48,6 @@ namespace Project_CS
             get { return _money; }
             set { _money = value; }
         }
+
     }
 }
