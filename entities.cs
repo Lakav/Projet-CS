@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Security.Cryptography.X509Certificates;
 
 namespace Project_CS
@@ -12,6 +13,7 @@ namespace Project_CS
         private int _dodge;
         private string _name;
         private int _money = 20;
+        private int _crit;
 
         public int Health
         {
@@ -47,6 +49,12 @@ namespace Project_CS
         {
             get { return _money; }
             set { _money = value; }
+        }
+
+        public int Crit
+        {
+            get { return _crit; }
+            set { _crit = value; }
         }
 
     }

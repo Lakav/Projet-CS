@@ -11,6 +11,7 @@ namespace Project_CS
             this.Dodge = 15;
             this.Health = 100;
             this.Nen = 0;
+            this.Crit = 5;
         }
 
         public void printStatsGon()
@@ -33,6 +34,24 @@ namespace Project_CS
             {
                 Console.WriteLine("You haven't dodged");
             }
+        }
+
+        public void Cc()
+        {
+            Console.WriteLine(Name);
+            Random crit = new Random();
+            int chance = crit.Next(0, 100);
+
+            if (chance <= Crit)
+            {
+                Console.WriteLine("THAT'S A CRIT!!!");
+            }
+
+            if (chance > Crit)
+            {
+                Console.WriteLine("just a hit");
+            }
+
         }
 
     }
