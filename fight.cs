@@ -150,7 +150,7 @@ namespace Project_CS
                 zushi.AllyAttack(guido);
                 guido.EnnemyAttack(zushi);
             }
-            
+            // a finir pour le combat
 
 
 
