@@ -71,6 +71,5 @@ namespace Project_CS
             Console.WriteLine($"{Name} a une puissance de {Powerfull}, une esquive de {Dodge}, {Health} poits de vie et" +
                               $" un Nen a {Nen}");
         }
-        
     }
 }
