@@ -102,26 +102,5 @@ namespace Project_CS
             }
         }
 
-        public void CharacterChoice(Battle Choice)
-        {
-            if (Choice = "1")
-            {
-                Gon gon = new Gon();
-                gon.Character();
-            }
-            if (Choice = "2")
-            {
-                Kirua kirua = new Kirua();
-                kirua.Character();
-            }
-            if (Choice = "3")
-            {
-                Zushi zushi = new Zushi();
-                zushi.Character();
-            }
-            Console.WriteLine("La selection n'est pas valide essayez a nouveau");
-            CharacterChoice(Choice);
-        }
-
     }
 }
