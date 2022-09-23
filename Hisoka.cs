@@ -6,7 +6,7 @@ namespace Project_CS
         public new void Character()
         {
             this.Name = "hisoka";
-            this.Powerfull = 15;
+            this.Powerfull = 50;
             this.Dodge = 35;
             this.Health = 200;
             this.Nen = 5;
