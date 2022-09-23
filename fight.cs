@@ -37,11 +37,8 @@ namespace Project_CS
                     Console.WriteLine("La selecn n'est pas bonne.");
                     CharacterChoice();
                     break;
-
             }
-            
         }
-
         
         public void Fight()
         {
@@ -69,6 +66,7 @@ namespace Project_CS
             CharacterChoice();
 
             Console.ReadLine();
+            Console.Clear();
 
             
             
