@@ -4,40 +4,42 @@ namespace Project_CS
 {
     public class Battle
     {
-        public void CharacterChoice(string choice)
+        public void CharacterChoice()
         {
-            if (choice == "1")
+            string choice = Console.ReadLine();
+            switch (choice)
             {
-                Console.Clear();
+                case ("1") :
+                    Console.Clear();
                 
-                Gon gon = new Gon();
-                gon.Character();
-                gon.printStats();
-            }
-            if (choice == "2")
-            {
-                Console.Clear();
+                    Gon gon = new Gon();
+                    gon.Character();
+                    gon.printStats();
+                    break;
+                    
+                case ("2") : 
+                    Console.Clear();
 
-                Kirua kirua = new Kirua();
-                kirua.Character();
-                kirua.printStats();
+                    Kirua kirua = new Kirua();
+                    kirua.Character();
+                    kirua.printStats();
+                    break;
+                    
+                case ("3"):
+                    Console.Clear();
+
+                    Zushi zushi = new Zushi();
+                    zushi.Character();
+                    zushi.printStats();
+                    break;
+                
+                default:
+                    Console.WriteLine("La selecn n'est pas bonne.");
+                    CharacterChoice();
+                    break;
 
             }
-            if (choice == "3")
-            {
-                Console.Clear();
-
-                Zushi zushi = new Zushi();
-                zushi.Character();
-                zushi.printStats();
-
-            }
-            else
-            {
-                Console.WriteLine("La selection n'est pas bonne.");
-                choice = Console.ReadLine();
-                CharacterChoice(choice);
-            }
+            
         }
 
         
@@ -63,9 +65,8 @@ namespace Project_CS
                               "Esquive : 15     Esquive : 20        Esquive : 15 \n"+
                               "Nen : 0          Nen : 0             Nen : 1 ");
 
-            String choice = Console.ReadLine();
 
-            CharacterChoice(choice);
+            CharacterChoice();
 
             Console.ReadLine();
 
