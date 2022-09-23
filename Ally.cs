@@ -23,7 +23,6 @@ namespace Project_CS
             {
                 Console.WriteLine($"{Name} have dodged");
                 
-
             }
             else if (chanceD > Dodge)
             { 
