@@ -1,7 +1,7 @@
 using System;
 namespace Project_CS
 {
-    public class Kirua : Entities
+    public class Kirua : Ally
     {
         public new void Character()
         {

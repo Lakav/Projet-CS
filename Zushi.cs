@@ -1,7 +1,7 @@
 using System;
 namespace Project_CS
 {
-    public class Zushi : Entities
+    public class Zushi : Ally
     {
         public new void Character()
         {

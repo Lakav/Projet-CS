@@ -73,13 +73,24 @@ namespace Project_CS
                     Console.Clear();
                 
                 }
-
             }
-            
-            
-            
+        }
 
-      
+        public void Heal100(Ally ally)
+        {
+            ally.Health = 100;
+        }
+        public void Heal125(Ally ally)
+        {
+            ally.Health = 125;
+        }
+        public void Heal150(Ally ally)
+        {
+            ally.Health = 150;
+        }
+        public void Heal200(Ally ally)
+        {
+            ally.Health = 200;
         }
     }
 }

@@ -2,48 +2,53 @@ using System;
 
 namespace Project_CS
 {
-    public class 
-        Battle
+    public class Battle
     {
-        public void CharacterChoice()
-        {
-            string choice = Console.ReadLine();
-            switch (choice)
-            {
-                case ("1") :
-                    Console.Clear();
-                
-                    Gon gon = new Gon();
-                    gon.Character();
-                    gon.printStats();
-                    break;
-                    
-                case ("2") : 
-                    Console.Clear();
 
-                    Kirua kirua = new Kirua();
-                    kirua.Character();
-                    kirua.printStats();
-                    break;
-                    
-                case ("3"):
-                    Console.Clear();
-
-                    Zushi zushi = new Zushi();
-                    zushi.Character();
-                    zushi.printStats();
-                    break;
-                
-                default:
-                    Console.WriteLine("La selecn n'est pas bonne.");
-                    CharacterChoice();
-                    break;
-            }
-        }
-        
-        
         public void Fight()
         {
+            
+            Gon gon = new Gon();
+            Kirua kirua = new Kirua();
+            Zushi zushi = new Zushi();
+
+
+            void CharacterChoice()
+            {
+                
+                string choice = Console.ReadLine();
+                switch (choice)
+                
+                {
+                    case ("1") :
+                        
+                        gon.Character();
+                        Console.Clear();
+                        gon.printStats();
+                        break;
+                    
+                    case ("2") : 
+                        
+                        kirua.Character();
+                        Console.Clear();
+                        kirua.printStats();
+                        break;
+                    
+                    case ("3"):
+                        
+                        zushi.Character();
+                        Console.Clear();
+                        zushi.printStats();
+                        break;
+                
+                    default:
+                        
+                        Console.WriteLine("La selection n'est pas bonne.");
+                        CharacterChoice();
+                        break;
+                }
+            }
+            
             Console.Clear();
 
             Console.WriteLine("Bienvenue dans la tour Celeste, il y a un total de 50 etages ici, \n" +
@@ -71,8 +76,80 @@ namespace Project_CS
             Console.WriteLine("Laissez moi vous presentez maitre wing .... ");
             Console.WriteLine("Utlilité du role de wing");
             Console.WriteLine("proposition du combat");
-            
 
+            Guido guido = new Guido();
+            guido.Character();
+            
+            if (gon.Health > 1)
+            {
+                gon.AllyAttack(guido);
+                guido.EnnemyAttack(gon);
+                
+                gon.AllyAttack(guido);
+                guido.EnnemyAttack(gon);
+                
+                gon.AllyAttack(guido);
+                guido.EnnemyAttack(gon);
+                
+                gon.AllyAttack(guido);
+                guido.EnnemyAttack(gon);
+                
+                gon.AllyAttack(guido);
+                guido.EnnemyAttack(gon);
+                
+                gon.AllyAttack(guido);
+                guido.EnnemyAttack(gon);
+                
+                gon.AllyAttack(guido);
+                guido.EnnemyAttack(gon);
+            }
+            if (kirua.Health > 1)
+            {
+                kirua.AllyAttack(guido);
+                guido.EnnemyAttack(kirua);
+                
+                kirua.AllyAttack(guido);
+                guido.EnnemyAttack(kirua);
+                
+                kirua.AllyAttack(guido);
+                guido.EnnemyAttack(kirua);
+                
+                kirua.AllyAttack(guido);
+                guido.EnnemyAttack(kirua);
+                
+                kirua.AllyAttack(guido);
+                guido.EnnemyAttack(kirua);
+                
+                kirua.AllyAttack(guido);
+                guido.EnnemyAttack(kirua);
+                
+                kirua.AllyAttack(guido);
+                guido.EnnemyAttack(kirua);
+
+            }
+            if (zushi.Health > 1)
+            {
+                zushi.AllyAttack(guido);
+                guido.EnnemyAttack(zushi);
+                
+                zushi.AllyAttack(guido);
+                guido.EnnemyAttack(zushi);
+                
+                zushi.AllyAttack(guido);
+                guido.EnnemyAttack(zushi);
+                
+                zushi.AllyAttack(guido);
+                guido.EnnemyAttack(zushi);
+                
+                zushi.AllyAttack(guido);
+                guido.EnnemyAttack(zushi);
+                
+                zushi.AllyAttack(guido);
+                guido.EnnemyAttack(zushi);
+                
+                zushi.AllyAttack(guido);
+                guido.EnnemyAttack(zushi);
+            }
             
 
 
