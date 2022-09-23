@@ -102,5 +102,10 @@ namespace Project_CS
             }
         }
 
+        public void CharacterChoice()
+        {
+            
+        }
+
     }
 }
