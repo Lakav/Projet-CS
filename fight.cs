@@ -4,6 +4,27 @@ namespace Project_CS
 {
     public class Battle
     {
+        public void CharacterChoice(string Choice)
+        {
+            if (Choice == "1")
+            {
+                Gon gon = new Gon();
+                gon.Character();
+            }
+            if (Choice == "2")
+            {
+                Kirua kirua = new Kirua();
+                kirua.Character();
+            }
+            if (Choice == "3")
+            {
+                Zushi zushi = new Zushi();
+                zushi.Character();
+            }
+            Console.WriteLine("La selection n'est pas valide essayez a nouveau");
+            CharacterChoice(Choice);
+        }
+
         
         public void Fight()
         {
@@ -14,7 +35,18 @@ namespace Project_CS
                               "dizaine d'etages suivante." +
                               "Vous avez le droit de combattre uniquement les maitres d'etages pour monter par dizaines " +
                               "mais les combats seront plus hardus");
+            Console.ReadLine();
+            
+            Console.Clear();
+
             Console.WriteLine("Je vais commencer par prendre votre identiée, qui etes vous?");
+
+            Console.WriteLine("");
+            String Choice = Console.ReadLine();
+            
+
+
+
             
             
             
@@ -23,7 +55,10 @@ namespace Project_CS
             
         }
       
-    }
+    
 
+
+    }
 }
+
 
