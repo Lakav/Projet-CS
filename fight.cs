@@ -68,6 +68,14 @@ namespace Project_CS
 
             Console.ReadLine();
             Console.Clear();
+            Console.WriteLine("Laissez moi vous presentez maitre wing .... ");
+            Console.WriteLine("Utlilité du role de wing");
+            Console.WriteLine("proposition du combat");
+            
+
+            
+
+
 
             Console.WriteLine("bienvenu de la part de wing");
             
