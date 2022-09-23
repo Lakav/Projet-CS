@@ -15,6 +15,8 @@ namespace Project_CS
         
         public void EnnemyAttack(Ally ally)
         {
+            Cc();
+            ChDodge();
             
             int max = Powerfull + 4;
             int min = Powerfull - 4;
