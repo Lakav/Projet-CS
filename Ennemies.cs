@@ -21,7 +21,8 @@ namespace Project_CS
             if (chanceD <= Dodge)
             {
                 Console.WriteLine($"{Name} have dodged");
-                
+                Console.ReadLine();
+                Console.Clear();
 
             }
             else if (chanceD > Dodge)
@@ -37,8 +38,9 @@ namespace Project_CS
                     int min = Powerfull - 4;
                     Random hRange = new Random();
                     int HR = hRange.Next(min, max);
-                    Console.WriteLine($"- {HR}");
+                    Console.WriteLine($"- {HR} HP!");
                     ally.Health -= HR;
+                    Console.WriteLine($"{ally.Name} is {ally.Health} HP remaining");
                     if (ally.Health <= 0)
                     {
                 
@@ -46,6 +48,8 @@ namespace Project_CS
                         Environment.Exit(0);
                     }
                     Powerfull /= 2;
+                    Console.ReadLine();
+                    Console.Clear();
                 }   
 
                 if (chance > Crit)
@@ -55,14 +59,17 @@ namespace Project_CS
                     int min = Powerfull - 4;
                     Random hRange = new Random();
                     int HR = hRange.Next(min, max);
-                    Console.WriteLine($"- {HR}");
+                    Console.WriteLine($"- {HR} HP!");
                     ally.Health -= HR;
+                    Console.WriteLine($"{ally.Name} is {ally.Health} HP remaining");
                     if (ally.Health <= 0)
                     {
                 
                         Console.WriteLine("You'r dead...");
                         Environment.Exit(0);
                     }
+                    Console.ReadLine();
+                    Console.Clear();
                 }
             }
         }

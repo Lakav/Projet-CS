@@ -7,16 +7,30 @@ namespace Project_CS
     {
         static void Main(string[] args)
         {
-           Battle fight = new Battle(); 
-           fight.Fight(); 
-           /*
-            Gon gon = new Gon();
+            Battle fight = new Battle(); 
+            fight.Fight(); 
+           
+            /*Gon gon = new Gon();
             Hisoka hisoka = new Hisoka();
             hisoka.Character();
             gon.Character();
-            Console.WriteLine(hisoka.Name);
-            Console.WriteLine(gon.Name);
-            gon.AllyAttack(hisoka);*/
+            gon.AllyAttack(hisoka);
+            hisoka.EnnemyAttack(gon);
+            gon.AllyAttack(hisoka);
+            hisoka.EnnemyAttack(gon);
+            gon.AllyAttack(hisoka);
+            hisoka.EnnemyAttack(gon);            
+            gon.AllyAttack(hisoka);
+            hisoka.EnnemyAttack(gon);
+            gon.AllyAttack(hisoka);
+            hisoka.EnnemyAttack(gon);
+            gon.AllyAttack(hisoka);
+            hisoka.EnnemyAttack(gon);
+            gon.AllyAttack(hisoka);
+            hisoka.EnnemyAttack(gon);
+            gon.AllyAttack(hisoka);
+            hisoka.EnnemyAttack(gon);*/
+            
 
 
         }
