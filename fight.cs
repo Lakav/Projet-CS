@@ -60,10 +60,12 @@ namespace Project_CS
                 if (ally.Health > 0)
                 {
                     Console.WriteLine("YOU WIN!"); 
+                    
                 }
                 else if (ennemy.Health >0)
                 {
                     Console.WriteLine("you loose ...");
+                    Startfight(ally,ennemy);
                 }
             }
 
@@ -107,40 +109,22 @@ namespace Project_CS
             if (gon.Health > 1)
             {
                 Startfight(gon , guido);
-                
+                gon.Health = 100;
+
             }
             if (kirua.Health > 1)
             {
                 Startfight(kirua , guido);
+                kirua.Health = 100;
+
             }
             if (zushi.Health > 1)
             {
                 Startfight(zushi , guido);
+                zushi.Health = 125;
+
             }
-            
-
-
-
-       
-            
-            
-            
-            
-            
-
-
-
-            
-            
-            
-            
-            
-            
         }
-      
-    
-
-
     }
 }
 
