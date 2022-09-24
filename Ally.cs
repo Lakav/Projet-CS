@@ -14,66 +14,74 @@ namespace Project_CS
             Crit = 0;
         }
         
-        public void AllyAttack(Ennemies ennemy)
+        public void AllyAttack(Ally ally , Ennemies ennemy)
         {
-            Random dodge = new Random();
-            int chanceD = dodge.Next(0, 100);
-            
-            if (chanceD <= Dodge)
+            if (ally.Health > 0)
             {
-                Console.WriteLine($"{Name} have dodged");
-                Console.ReadLine();
-                Console.Clear();
-            }
-            else if (chanceD > Dodge)
-            { 
-                Random crit = new Random();
-                int chance = crit.Next(0, 100);
+                Random dodge = new Random();
+                int chanceD = dodge.Next(0, 100);
 
-                if (chance <= Crit)
+                if (chanceD <= Dodge)
                 {
-                    Console.WriteLine($"{Name} : THAT'S A CRIT!!!");
-                    Powerfull *= 2;
-                    int max = Powerfull + 4;
-                    int min = Powerfull - 4;
-                    Random hRange = new Random();
-                    int HR = hRange.Next(min, max);
-                    
-                    Console.WriteLine($"{ennemy.Health} - {HR} HP!");
-                    ennemy.Health -= HR;
-                    Console.WriteLine($"{ennemy.Name} is {ennemy.Health} remaining");
-                    if (ennemy.Health <= 0)
-                    {
-                
-                        Console.WriteLine("He's dead...");
-                        Environment.Exit(0);
-                    }
-                    Powerfull /= 2;
+                    Console.WriteLine($"{Name} have dodged");
                     Console.ReadLine();
                     Console.Clear();
-                }   
-
-                if (chance > Crit)
-                { 
-                    Console.WriteLine($"{Name} : just a hit");
-                    int max = Powerfull + 4;
-                    int min = Powerfull - 4;
-                    Random hRange = new Random();
-                    int HR = hRange.Next(min, max);
-                    Console.WriteLine($"{ennemy.Health} - {HR} HP!");
-                    ennemy.Health -= HR;
-                    Console.WriteLine($"{ennemy.Name} is {ennemy.Health} remaining");
-                    if (ennemy.Health <= 0)
-                    {
-                
-                        Console.WriteLine("He's dead...");
-                        Environment.Exit(0);
-                    }
-                    Console.ReadLine();
-                    Console.Clear();
-                
                 }
+                else if (chanceD > Dodge)
+                {
+
+                    Random crit = new Random();
+                    int chance = crit.Next(0, 100);
+
+                    if (chance <= Crit)
+                    {
+                        Console.WriteLine($"{Name} : THAT'S A CRIT!!!");
+                        Powerfull *= 2;
+                        int max = Powerfull + 4;
+                        int min = Powerfull - 4;
+                        Random hRange = new Random();
+                        int HR = hRange.Next(min, max);
+
+                        Console.WriteLine($"- {HR} HP!");
+                        ennemy.Health -= HR;
+                        Console.WriteLine($"{ennemy.Name} is {ennemy.Health} remaining");
+                        if (ennemy.Health <= 0)
+                        {
+
+                            Console.WriteLine("He's dead...");
+                        }
+
+                        Powerfull /= 2;
+                        Console.ReadLine();
+                        Console.Clear();
+                    }
+
+                    if (chance > Crit)
+                    {
+                        Console.WriteLine($"{Name} : just a hit");
+                        int max = Powerfull + 4;
+                        int min = Powerfull - 4;
+                        Random hRange = new Random();
+                        int HR = hRange.Next(min, max);
+                        Console.WriteLine($"- {HR} HP!");
+                        ennemy.Health -= HR;
+                        Console.WriteLine($"{ennemy.Name} is {ennemy.Health} remaining");
+                        if (ennemy.Health <= 0)
+                        {
+
+                            Console.WriteLine("He's dead...");
+
+                        }
+
+                        Console.ReadLine();
+                        Console.Clear();
+
+                    }
+                }
+
             }
+
+
         }
 
         public void Heal100(Ally ally)

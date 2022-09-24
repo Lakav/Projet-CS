@@ -49,6 +49,24 @@ namespace Project_CS
                 }
             }
             
+            void Startfight(Ally ally , Ennemies ennemy)
+            {
+                while (ally.Health > 0 && ennemy.Health > 0)
+                {
+                    ally.AllyAttack(ally , ennemy);
+                    ennemy.EnnemyAttack(ennemy, ally);
+                }
+
+                if (ally.Health > 0)
+                {
+                    Console.WriteLine("YOU WIN!"); 
+                }
+                else if (ennemy.Health >0)
+                {
+                    Console.WriteLine("you loose ...");
+                }
+            }
+
             Console.Clear();
 
             Console.WriteLine("Bienvenue dans la tour Celeste, il y a un total de 50 etages ici, \n" +
@@ -75,86 +93,35 @@ namespace Project_CS
             Console.Clear();
             Console.WriteLine("Laissez moi vous presentez maitre wing .... ");
             Console.WriteLine("Utlilité du role de wing");
+            Console.ReadLine();
+            Console.Clear();
             Console.WriteLine("proposition du combat");
+            
+            Console.ReadLine();
+            Console.Clear();
+            
 
             Guido guido = new Guido();
             guido.Character();
-            
+
             if (gon.Health > 1)
             {
-                gon.AllyAttack(guido);
-                guido.EnnemyAttack(gon);
+                Startfight(gon , guido);
                 
-                gon.AllyAttack(guido);
-                guido.EnnemyAttack(gon);
-                
-                gon.AllyAttack(guido);
-                guido.EnnemyAttack(gon);
-                
-                gon.AllyAttack(guido);
-                guido.EnnemyAttack(gon);
-                
-                gon.AllyAttack(guido);
-                guido.EnnemyAttack(gon);
-                
-                gon.AllyAttack(guido);
-                guido.EnnemyAttack(gon);
-                
-                gon.AllyAttack(guido);
-                guido.EnnemyAttack(gon);
             }
             if (kirua.Health > 1)
             {
-                kirua.AllyAttack(guido);
-                guido.EnnemyAttack(kirua);
-                
-                kirua.AllyAttack(guido);
-                guido.EnnemyAttack(kirua);
-                
-                kirua.AllyAttack(guido);
-                guido.EnnemyAttack(kirua);
-                
-                kirua.AllyAttack(guido);
-                guido.EnnemyAttack(kirua);
-                
-                kirua.AllyAttack(guido);
-                guido.EnnemyAttack(kirua);
-                
-                kirua.AllyAttack(guido);
-                guido.EnnemyAttack(kirua);
-                
-                kirua.AllyAttack(guido);
-                guido.EnnemyAttack(kirua);
-
+                Startfight(kirua , guido);
             }
             if (zushi.Health > 1)
             {
-                zushi.AllyAttack(guido);
-                guido.EnnemyAttack(zushi);
-                
-                zushi.AllyAttack(guido);
-                guido.EnnemyAttack(zushi);
-                
-                zushi.AllyAttack(guido);
-                guido.EnnemyAttack(zushi);
-                
-                zushi.AllyAttack(guido);
-                guido.EnnemyAttack(zushi);
-                
-                zushi.AllyAttack(guido);
-                guido.EnnemyAttack(zushi);
-                
-                zushi.AllyAttack(guido);
-                guido.EnnemyAttack(zushi);
-                
-                zushi.AllyAttack(guido);
-                guido.EnnemyAttack(zushi);
+                Startfight(zushi , guido);
             }
-            // a finir pour le combat
+            
 
 
 
-            Console.WriteLine("bienvenu de la part de wing");
+       
             
             
             
