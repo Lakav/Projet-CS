@@ -124,6 +124,12 @@ namespace Project_CS
                 zushi.Health = 125;
 
             }
+            Console.ReadLine();
+            Console.Clear();
+            Console.WriteLine("menu inter combat");
+            Console.ReadLine();
+            Console.Clear();
+            
         }
     }
 }
