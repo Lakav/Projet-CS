@@ -340,13 +340,7 @@ namespace Project_CS
                     Menu(ally); 
                 }
 
-            /* 
-            ici c'est le menu ou tu peux t'ammeliorer
-            -> ameliorer le nen : vie +25 ; puissance +10 ; dodge +3 ; crit +3
-            -> ameliorer la puissance *2
-            -> ameliorer le dodge +15
-            -> ameliorer le crit +15
-            */
+
             }
 
             Console.Clear();
