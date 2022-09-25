@@ -379,8 +379,8 @@ namespace Project_CS
             Console.ReadLine();
             Console.Clear();
             
-
-            Guido guido = new Guido();
+/////////////////////////////////////////////////////////////////// FIGHT 1 
+            Guido guido = new Guido();  
             guido.Character();
 
             if (gon.Health > 1)
@@ -426,7 +426,7 @@ namespace Project_CS
                 Menu(zushi);
             }
 
-///////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////// FIGHT 2
 
             Riehvelt riehvelt = new Riehvelt();
             riehvelt.Character();
@@ -475,7 +475,8 @@ namespace Project_CS
                 Menu(zushi);
             }
 
-///////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////// FIGHT 3
+
 
             Kastrot kastrot = new Kastrot();
             kastrot.Character();
@@ -523,7 +524,7 @@ namespace Project_CS
                 Menu(zushi);
             }
 
-///////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////// FIGHT 4
             
             Kuroro kuroro = new Kuroro();
             kuroro.Character();
@@ -571,7 +572,7 @@ namespace Project_CS
                 Menu(zushi);
             }
 
-///////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////// FIGHT 5
 
             Hisoka hisoka = new Hisoka();
             hisoka.Character();
@@ -612,12 +613,3 @@ namespace Project_CS
         }
     }
 }
-
-    /* 
-    ici c'est le menu ou tu peux t'ammeliorer
-    -> ameliorer le nen : vie +25 ; puissance +10 ; dodge +3 ; crit +3
-    -> ameliorer la puissance *2
-    -> ameliorer le dodge +15
-    -> ameliorer le crit +15
-    */
-    
