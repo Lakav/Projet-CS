@@ -51,6 +51,8 @@ namespace Project_CS
             
             void Startfight(Ally ally , Ennemies ennemy)
             {
+                
+                Console.WriteLine($"THE FIGHT START : {ally.Name} VS {ennemy.Name}");
                 while (ally.Health > 0 && ennemy.Health > 0)
                 {
                     ally.AllyAttack(ally , ennemy);
@@ -64,7 +66,7 @@ namespace Project_CS
                 }
                 else if (ennemy.Health >0)
                 {
-                    Console.WriteLine("you loose ...");
+                    Console.WriteLine("you loose ... try again");
                     Startfight(ally,ennemy);
                 }
             }
