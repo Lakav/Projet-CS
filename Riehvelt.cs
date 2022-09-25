@@ -1,7 +1,7 @@
 using System;
 namespace Project_CS
 {
-    public class Riehvelt : Entities
+    public class Riehvelt : Ennemies
     {
 
         public new void Character()

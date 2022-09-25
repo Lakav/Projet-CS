@@ -1,7 +1,7 @@
 using System;
 namespace Project_CS
 {
-    public class Kuroro : Entities
+    public class Kuroro : Ennemies
     {
         public new void Character()
         {
