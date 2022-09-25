@@ -136,7 +136,23 @@ namespace Project_CS
 
             void Menu(Ally ally)
             {
-                Console.WriteLine("Choisissez qu'elle compétence améliorer \n"+"");
+                Console.Clear();
+                Console.WriteLine("Bienvenue au centre d'entrainement du professeur Wing\n"+
+                                  "ici vous allez pouvoir dépenser l'argent dans des entrainements pour améliorer vos " +
+                                  "compétences.");
+                Console.WriteLine($"Tapez le chiffre respectif aux choix que vous souhaitez.\n" +
+                                  "\n" +
+                                  "\n" +
+                                  "    Nen : 1    |   Force : 2    |    Dodge : 3    |    Crit : 4\n" +
+                                  "    25 000C    |    55 000C     |     22 000C     |    18 000C\n" +
+                                  "               |                |                 |              \n" +
+                                  "    PDV + 25   |    Force x2    |    Dodge +10    |    Crit +15\n" +
+                                  "    Force +10  |                |                 |\n" +
+                                  "    Dodge +3   |                |                 |\n" +
+                                  "    Crit +5    |                |                 |\n" +
+                                  "\n" +
+                                 $"    Money : {ally.Money}                                             Sortie : 5");
+                                  
                 string choice = Console.ReadLine();
                 if (choice == "1")
                 {
@@ -151,7 +167,7 @@ namespace Project_CS
                         ally.Health += 25;
                         ally.Powerfull += 10;
                         ally.Dodge += 3;
-                        ally.Crit += 15;
+                        ally.Crit += 5;
                         ally.Nen += 1;
                         ally.Money -= 25000;
                         Console.WriteLine($"Il vous reste {ally.Money}");
@@ -212,7 +228,7 @@ namespace Project_CS
 
                     if(validation == "Y" || validation == "y")
                     { 
-                        ally.Dodge += 3;
+                        ally.Dodge += 10;
                         ally.Money -= 22000;
                         Console.WriteLine($"Il vous reste {ally.Money}");
                         Menu(ally);
@@ -243,7 +259,7 @@ namespace Project_CS
                     if(validation == "Y" || validation == "y")
                     {
                     ally.Crit += 15;
-                    ally.Money -= 15000;
+                    ally.Money -= 18000;
                     Console.WriteLine($"Il vous reste {ally.Money}");
                     Menu(ally);
                     }
@@ -504,8 +520,8 @@ namespace Project_CS
                 gon.Heal(gon);
                 gon.printStats();
                 gon.Money += 30000;
-                Console.WriteLine(gon.Money);
-
+                Console.WriteLine("Vous recevez 30 000 crédit");
+                Console.WriteLine($"Vous avez {gon.Money} crédit dans votre portfeuille");
             }
             if (kirua.Health > 1)
             {
