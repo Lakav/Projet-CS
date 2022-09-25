@@ -23,24 +23,85 @@ namespace Project_CS
                 {
                     case ("1") :
                         
+                    Console.WriteLine("Vous avez choisi Gon");
+                    Console.WriteLine("es-tu vraiement sûr de ton choix");
+                    Console.WriteLine("Y/N");
+
+                    string validation = Console.ReadLine();
+
+                    if(validation == "Y" || validation == "y")
+                    {
                         gon.Character();
                         Console.Clear();
-                        gon.printStats();
-                        break;
+                        gon.printStats(); 
+                    }
+
+                    if(validation == "N" || validation == "n")
+                    {
+                        Console.WriteLine("Choix annulé");
+                        CharacterChoice();
+                    }
+                    else if(validation != "Y" && validation != "y" && validation != "N" && validation != "n") 
+                    {
+                        Console.WriteLine("Choix Incompris");
+                        CharacterChoice();
+                    }
+                    break;
+                        
                     
                     case ("2") : 
                         
+                    Console.WriteLine("Vous avez choisi Kirua");
+                    Console.WriteLine("es-tu vraiement sûr de ton choix");
+                    Console.WriteLine("Y/N");
+
+                    string validation2 = Console.ReadLine();
+
+                    if(validation2 == "Y" || validation2 == "y")
+                    {
                         kirua.Character();
                         Console.Clear();
-                        kirua.printStats();
-                        break;
+                        kirua.printStats(); 
+                    }
+
+                    if(validation2 == "N" || validation2 == "n")
+                    {
+                        Console.WriteLine("Choix annulé");
+                        CharacterChoice();
+                    }
+                    else if(validation2 != "Y" && validation2 != "y" && validation2 != "N" && validation2 != "n") 
+                    {
+                        Console.WriteLine("Choix Incompris");
+                        CharacterChoice();
+                    }
+                    break;
                     
                     case ("3"):
                         
-                        zushi.Character();
+                    Console.WriteLine("Vous avez choisi Zushi");
+                    Console.WriteLine("es-tu vraiement sûr de ton choix");
+                    Console.WriteLine("Y/N");
+
+                    string validation3 = Console.ReadLine();
+
+                    if(validation3 == "Y" || validation3 == "y")
+                    {
+                        gon.Character();
                         Console.Clear();
-                        zushi.printStats();
-                        break;
+                        gon.printStats(); 
+                    }
+
+                    if(validation3 == "N" || validation3 == "n")
+                    {
+                        Console.WriteLine("Choix annulé");
+                        CharacterChoice();
+                    }
+                    else if(validation3 != "Y" && validation3 != "y" && validation3 != "N" && validation3 != "n") 
+                    {
+                        Console.WriteLine("Choix Incompris");
+                        CharacterChoice();
+                    }
+                    break;
                 
                     default:
                         
@@ -75,7 +136,7 @@ namespace Project_CS
 
             void Menu(Ally ally)
             {
-                Console.WriteLine("Choisissez qu'elle compétence améliorer");
+                Console.WriteLine("Choisissez qu'elle compétence améliorer \n"+"");
                 string choice = Console.ReadLine();
                 if (choice == "1")
                 {
@@ -92,6 +153,8 @@ namespace Project_CS
                         ally.Dodge += 3;
                         ally.Crit += 15;
                         ally.Nen += 1;
+                        ally.Money -= 25000;
+                        Console.WriteLine($"Il vous reste {ally.Money}");
                         ally.printStats();
                         Menu(ally); 
                     }
@@ -119,6 +182,8 @@ namespace Project_CS
                     if(validation == "Y" || validation == "y")
                     {
                         ally.Powerfull *= 2;
+                        ally.Money -= 55000;
+                        Console.WriteLine($"Il vous reste {ally.Money}");
                         ally.printStats();
                         Menu(ally);
                     }
@@ -148,6 +213,8 @@ namespace Project_CS
                     if(validation == "Y" || validation == "y")
                     { 
                         ally.Dodge += 3;
+                        ally.Money -= 22000;
+                        Console.WriteLine($"Il vous reste {ally.Money}");
                         Menu(ally);
                     }
 
@@ -176,6 +243,8 @@ namespace Project_CS
                     if(validation == "Y" || validation == "y")
                     {
                     ally.Crit += 15;
+                    ally.Money -= 15000;
+                    Console.WriteLine($"Il vous reste {ally.Money}");
                     Menu(ally);
                     }
 
@@ -273,6 +342,9 @@ namespace Project_CS
                 Startfight(gon , guido);
                 gon.Heal(gon);
                 gon.printStats();
+                gon.Money += 30000;
+                Console.WriteLine("Vous recevez 30 000 crédit");
+                Console.WriteLine($"Vous avez {gon.Money} crédit dans votre portfeuille");
 
             }
             if (kirua.Health > 1)
@@ -280,6 +352,9 @@ namespace Project_CS
                 Startfight(kirua , guido);
                 kirua.Heal(kirua);
                 kirua.printStats();
+                kirua.Money += 30000;
+                Console.WriteLine("Vous recevez 30 000 crédit");
+                Console.WriteLine($"Vous avez {kirua.Money} crédit dans votre portfeuille");
 
             }
             if (zushi.Health > 1)
@@ -287,6 +362,8 @@ namespace Project_CS
                 Startfight(zushi , guido);
                 zushi.Heal(zushi);
                 zushi.printStats();
+                Console.WriteLine("Vous recevez 30 000 crédit");
+                Console.WriteLine($"Vous avez {zushi.Money} crédit dans votre portfeuille");
             }
 
             Console.ReadLine();
@@ -318,6 +395,9 @@ namespace Project_CS
                 Startfight(gon , riehvelt);
                 gon.Heal(gon);
                 gon.printStats();
+                gon.Money += 30000;
+                Console.WriteLine("Vous recevez 30 000 crédit");
+                Console.WriteLine($"Vous avez {gon.Money} crédit dans votre portfeuille");
 
             }
             if (kirua.Health > 1)
@@ -325,6 +405,9 @@ namespace Project_CS
                 Startfight(kirua , riehvelt);
                 kirua.Heal(kirua);
                 kirua.printStats();
+                kirua.Money += 30000;
+                Console.WriteLine("Vous recevez 30 000 crédit");
+                Console.WriteLine($"Vous avez {kirua.Money} crédit dans votre portfeuille");
 
             }
             if (zushi.Health > 1)
@@ -332,6 +415,9 @@ namespace Project_CS
                 Startfight(zushi , riehvelt);
                 zushi.Heal(zushi);
                 zushi.printStats();
+                zushi.Money += 30000;
+                Console.WriteLine("Vous recevez 30 000 crédit");
+                Console.WriteLine($"Vous avez {zushi.Money} crédit dans votre portfeuille");
             }
 
             Console.ReadLine();
@@ -363,6 +449,9 @@ namespace Project_CS
                 Startfight(gon , kastrot);
                 gon.Heal(gon);
                 gon.printStats();
+                gon.Money += 30000;
+                Console.WriteLine("Vous recevez 30 000 crédit");
+                Console.WriteLine($"Vous avez {gon.Money} crédit dans votre portfeuille");
 
             }
             if (kirua.Health > 1)
@@ -370,6 +459,9 @@ namespace Project_CS
                 Startfight(kirua , kastrot);
                 kirua.Heal(kirua);
                 kirua.printStats();
+                kirua.Money += 30000;
+                Console.WriteLine("Vous recevez 30 000 crédit");
+                Console.WriteLine($"Vous avez {kirua.Money} crédit dans votre portfeuille");
 
             }
             if (zushi.Health > 1)
@@ -377,6 +469,9 @@ namespace Project_CS
                 Startfight(zushi , kastrot);
                 zushi.Heal(zushi);
                 zushi.printStats();
+                zushi.Money += 30000;
+                Console.WriteLine("Vous recevez 30 000 crédit");
+                Console.WriteLine($"Vous avez {zushi.Money} crédit dans votre portfeuille");
             }
 
             Console.ReadLine();
@@ -408,6 +503,8 @@ namespace Project_CS
                 Startfight(gon , kuroro);
                 gon.Heal(gon);
                 gon.printStats();
+                gon.Money += 30000;
+                Console.WriteLine(gon.Money);
 
             }
             if (kirua.Health > 1)
@@ -415,6 +512,9 @@ namespace Project_CS
                 Startfight(kirua , kuroro);
                 kirua.Heal(kirua);
                 kirua.printStats();
+                kirua.Money += 30000;
+                Console.WriteLine("Vous recevez 30 000 crédit");
+                Console.WriteLine($"Vous avez {kirua.Money} crédit dans votre portfeuille");
 
             }
             if (zushi.Health > 1)
@@ -422,6 +522,9 @@ namespace Project_CS
                 Startfight(zushi , kuroro);
                 zushi.Heal(zushi);
                 zushi.printStats();
+                zushi.Money += 30000;
+                Console.WriteLine("Vous recevez 30 000 crédit");
+                Console.WriteLine($"Vous avez {zushi.Money} crédit dans votre portfeuille");
             }
 
             Console.ReadLine();
@@ -453,6 +556,9 @@ namespace Project_CS
                 Startfight(gon , hisoka);
                 gon.Heal(gon);
                 gon.printStats();
+                gon.Money += 30000;
+                Console.WriteLine(gon.Money);
+        
 
             }
             if (kirua.Health > 1)
@@ -460,6 +566,9 @@ namespace Project_CS
                 Startfight(kirua , hisoka);
                 kirua.Heal(kirua);
                 kirua.printStats();
+                kirua.Money += 30000;
+                Console.WriteLine("Vous recevez 30 000 crédit");
+                Console.WriteLine($"Vous avez {kirua.Money} crédit dans votre portfeuille");
 
             }
             if (zushi.Health > 1)
@@ -467,6 +576,9 @@ namespace Project_CS
                 Startfight(zushi , hisoka);
                 zushi.Heal(zushi);
                 zushi.printStats();
+                zushi.Money += 30000;
+                Console.WriteLine("Vous recevez 30 000 crédit");
+                Console.WriteLine($"Vous avez {zushi.Money} crédit dans votre portfeuille");
             }
 
             
