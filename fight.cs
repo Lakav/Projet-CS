@@ -111,20 +111,19 @@ namespace Project_CS
             if (gon.Health > 1)
             {
                 Startfight(gon , guido);
-                gon.Health = 100;
+                gon.Heal(gon);
 
             }
             if (kirua.Health > 1)
             {
                 Startfight(kirua , guido);
-                kirua.Health = 100;
+                kirua.Heal(kirua);
 
             }
             if (zushi.Health > 1)
             {
                 Startfight(zushi , guido);
-                zushi.Health = 125;
-
+                zushi.Heal(zushi);
             }
             Console.ReadLine();
             Console.Clear();

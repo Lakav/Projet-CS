@@ -84,21 +84,35 @@ namespace Project_CS
 
         }
 
-        public void Heal100(Ally ally)
+        public void Heal(Ally ally)
         {
-            ally.Health = 100;
+            if (ally.Nen == 0)
+            {
+                ally.Health = 100;
+            }
+            if (ally.Nen == 1)
+            {
+                ally.Health = 125;
+            }
+            if (ally.Nen == 2)
+            {
+                ally.Health = 150;
+            }
+            if (ally.Nen == 3)
+            {
+                ally.Health = 175;
+            }
+            if (ally.Nen == 4)
+            {
+                ally.Health = 200;
+            }
+            if (ally.Nen == 5)
+            {
+                ally.Health = 250;
+            }
+            
+            
         }
-        public void Heal125(Ally ally)
-        {
-            ally.Health = 125;
-        }
-        public void Heal150(Ally ally)
-        {
-            ally.Health = 150;
-        }
-        public void Heal200(Ally ally)
-        {
-            ally.Health = 200;
-        }
+
     }
 }
