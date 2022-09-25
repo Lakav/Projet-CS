@@ -96,9 +96,9 @@ namespace Project_CS
 
                     if(validation3 == "Y" || validation3 == "y")
                     {
-                        gon.Character();
+                        zushi.Character();
                         Console.Clear();
-                        gon.printStats(); 
+                        zushi.printStats(); 
                     }
 
                     if(validation3 == "N" || validation3 == "n")
