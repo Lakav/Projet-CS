@@ -67,8 +67,9 @@ namespace Project_CS
                 }
                 else if (ennemy.Health >0)
                 {
-                    Console.WriteLine("you loose ... try again");
-                    Startfight(ally,ennemy);
+                    Console.WriteLine("you loose ...\n" +
+                                      "restart for a new game");
+                    Environment.Exit(0);
                 }
             }
 
