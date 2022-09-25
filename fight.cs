@@ -16,7 +16,17 @@ namespace Project_CS
 
             void CharacterChoice()
             {
-                
+                Console.WriteLine("Je vais commencer par prendre votre identiée, qui etes vous?");
+                Console.WriteLine("Pour choisir votre personnage choisissez respectivement : | 1 pour Gon | 2 pour Kirua | 3 pour Zishi | \n"+
+                                  "\n"+
+                                  "Gon              Kirua               Zushi \n"+
+                                  "Vie : 100        Vie : 100           Vie : 125 \n"+
+                                  "Force : 12       Force : 9           Force : 9 \n"+
+                                  "Esquive : 15     Esquive : 20        Esquive : 15 \n"+
+                                  "Nen : 0          Nen : 0             Nen : 1 \n"+
+                                  "");
+
+
                 string choice = Console.ReadLine();
                 switch (choice)
                 
@@ -106,6 +116,7 @@ namespace Project_CS
                     default:
                         
                         Console.WriteLine("La selection n'est pas bonne.");
+                        Console.Clear();
                         CharacterChoice();
                         break;
                 }
@@ -353,17 +364,7 @@ namespace Project_CS
             Console.ReadLine();
             Console.Clear();
 
-            Console.WriteLine("Je vais commencer par prendre votre identiée, qui etes vous?");
-            Console.WriteLine("Pour choisir votre personnage choisissez respectivement : | 1 pour Gon | 2 pour Kirua | 3 pour Zishi | \n"+
-                              "\n"+
-                              "Gon              Kirua               Zushi \n"+
-                              "Vie : 100        Vie : 100           Vie : 125 \n"+
-                              "Force : 12       Force : 9           Force : 9 \n"+
-                              "Esquive : 15     Esquive : 20        Esquive : 15 \n"+
-                              "Nen : 0          Nen : 0             Nen : 1 \n"+
-                              "");
 
-            
             CharacterChoice();
 
             Console.ReadLine();
@@ -386,7 +387,6 @@ namespace Project_CS
             {
                 Startfight(gon , guido);
                 gon.Heal(gon);
-                gon.printStats();
                 gon.Money += 30000;
                 Console.WriteLine("Vous recevez 30 000 crédit");
                 Console.WriteLine($"Vous avez {gon.Money} crédit dans votre portfeuille");
@@ -396,7 +396,6 @@ namespace Project_CS
             {
                 Startfight(kirua , guido);
                 kirua.Heal(kirua);
-                kirua.printStats();
                 kirua.Money += 30000;
                 Console.WriteLine("Vous recevez 30 000 crédit");
                 Console.WriteLine($"Vous avez {kirua.Money} crédit dans votre portfeuille");
@@ -406,14 +405,11 @@ namespace Project_CS
             {
                 Startfight(zushi , guido);
                 zushi.Heal(zushi);
-                zushi.printStats();
+                zushi.Money += 30000;
                 Console.WriteLine("Vous recevez 30 000 crédit");
                 Console.WriteLine($"Vous avez {zushi.Money} crédit dans votre portfeuille");
             }
-
-            Console.ReadLine();
-            Console.Clear();
-            Console.WriteLine("Menu inter combat");
+            
             Console.ReadLine();
             Console.Clear();
 
@@ -439,7 +435,6 @@ namespace Project_CS
             {
                 Startfight(gon , riehvelt);
                 gon.Heal(gon);
-                gon.printStats();
                 gon.Money += 30000;
                 Console.WriteLine("Vous recevez 30 000 crédit");
                 Console.WriteLine($"Vous avez {gon.Money} crédit dans votre portfeuille");
@@ -449,7 +444,6 @@ namespace Project_CS
             {
                 Startfight(kirua , riehvelt);
                 kirua.Heal(kirua);
-                kirua.printStats();
                 kirua.Money += 30000;
                 Console.WriteLine("Vous recevez 30 000 crédit");
                 Console.WriteLine($"Vous avez {kirua.Money} crédit dans votre portfeuille");
@@ -459,15 +453,12 @@ namespace Project_CS
             {
                 Startfight(zushi , riehvelt);
                 zushi.Heal(zushi);
-                zushi.printStats();
                 zushi.Money += 30000;
                 Console.WriteLine("Vous recevez 30 000 crédit");
                 Console.WriteLine($"Vous avez {zushi.Money} crédit dans votre portfeuille");
             }
 
-            Console.ReadLine();
-            Console.Clear();
-            Console.WriteLine("Menu inter combat");
+
             Console.ReadLine();
             Console.Clear();
 
@@ -493,7 +484,6 @@ namespace Project_CS
             {
                 Startfight(gon , kastrot);
                 gon.Heal(gon);
-                gon.printStats();
                 gon.Money += 30000;
                 Console.WriteLine("Vous recevez 30 000 crédit");
                 Console.WriteLine($"Vous avez {gon.Money} crédit dans votre portfeuille");
@@ -503,7 +493,6 @@ namespace Project_CS
             {
                 Startfight(kirua , kastrot);
                 kirua.Heal(kirua);
-                kirua.printStats();
                 kirua.Money += 30000;
                 Console.WriteLine("Vous recevez 30 000 crédit");
                 Console.WriteLine($"Vous avez {kirua.Money} crédit dans votre portfeuille");
@@ -513,15 +502,11 @@ namespace Project_CS
             {
                 Startfight(zushi , kastrot);
                 zushi.Heal(zushi);
-                zushi.printStats();
                 zushi.Money += 30000;
                 Console.WriteLine("Vous recevez 30 000 crédit");
                 Console.WriteLine($"Vous avez {zushi.Money} crédit dans votre portfeuille");
             }
-
-            Console.ReadLine();
-            Console.Clear();
-            Console.WriteLine("Menu inter combat");
+            
             Console.ReadLine();
             Console.Clear();
 
@@ -547,7 +532,6 @@ namespace Project_CS
             {
                 Startfight(gon , kuroro);
                 gon.Heal(gon);
-                gon.printStats();
                 gon.Money += 30000;
                 Console.WriteLine("Vous recevez 30 000 crédit");
                 Console.WriteLine($"Vous avez {gon.Money} crédit dans votre portfeuille");
@@ -556,7 +540,6 @@ namespace Project_CS
             {
                 Startfight(kirua , kuroro);
                 kirua.Heal(kirua);
-                kirua.printStats();
                 kirua.Money += 30000;
                 Console.WriteLine("Vous recevez 30 000 crédit");
                 Console.WriteLine($"Vous avez {kirua.Money} crédit dans votre portfeuille");
@@ -566,15 +549,12 @@ namespace Project_CS
             {
                 Startfight(zushi , kuroro);
                 zushi.Heal(zushi);
-                zushi.printStats();
                 zushi.Money += 30000;
                 Console.WriteLine("Vous recevez 30 000 crédit");
                 Console.WriteLine($"Vous avez {zushi.Money} crédit dans votre portfeuille");
             }
 
-            Console.ReadLine();
-            Console.Clear();
-            Console.WriteLine("Menu inter combat");
+
             Console.ReadLine();
             Console.Clear();
 
@@ -600,9 +580,9 @@ namespace Project_CS
             {
                 Startfight(gon , hisoka);
                 gon.Heal(gon);
-                gon.printStats();
                 gon.Money += 30000;
-                Console.WriteLine(gon.Money);
+                Console.WriteLine("Vous recevez 30 000 crédit");
+                Console.WriteLine($"Vous avez {kirua.Money} crédit dans votre portfeuille");
         
 
             }
@@ -610,7 +590,6 @@ namespace Project_CS
             {
                 Startfight(kirua , hisoka);
                 kirua.Heal(kirua);
-                kirua.printStats();
                 kirua.Money += 30000;
                 Console.WriteLine("Vous recevez 30 000 crédit");
                 Console.WriteLine($"Vous avez {kirua.Money} crédit dans votre portfeuille");
@@ -620,7 +599,6 @@ namespace Project_CS
             {
                 Startfight(zushi , hisoka);
                 zushi.Heal(zushi);
-                zushi.printStats();
                 zushi.Money += 30000;
                 Console.WriteLine("Vous recevez 30 000 crédit");
                 Console.WriteLine($"Vous avez {zushi.Money} crédit dans votre portfeuille");
