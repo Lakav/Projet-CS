@@ -79,7 +79,9 @@ namespace Project_CS
                 string choice = Console.ReadLine();
                 if (choice == "1")
                 {
-                    Console.WriteLine("est tu vraiement sur de ton choix");
+                    Console.WriteLine("Vous avez choisi d'améliorer le Nen");
+                    Console.WriteLine("es-tu vraiement sûr de ton choix");
+                    Console.WriteLine("Y/N");
 
                     string validation = Console.ReadLine();
 
@@ -108,7 +110,9 @@ namespace Project_CS
 
                 if (choice == "2")
                 {
-                    Console.WriteLine("est tu vraiement sur de ton choix");
+                    Console.WriteLine("Vous avez choisi d'améliorer votre force");
+                    Console.WriteLine("es-tu vraiement sûr de ton choix");
+                    Console.WriteLine("Y/N");
 
                     string validation = Console.ReadLine();
 
@@ -135,7 +139,9 @@ namespace Project_CS
 
                 if (choice == "3")
                 {
-                    Console.WriteLine("est tu vraiment sur de ton choix");
+                    Console.WriteLine("Vous avez choisi d'améliorer votre esquive");
+                    Console.WriteLine("es-tu vraiement sûr de ton choix");
+                    Console.WriteLine("Y/N");
 
                     string validation = Console.ReadLine();
 
@@ -161,7 +167,9 @@ namespace Project_CS
 
                 if (choice == "4")
                 {
-                    Console.WriteLine("est tu vraiment sur de ton choix");
+                    Console.WriteLine("Vous avez choisi d'améliorer vos coups critique");
+                    Console.WriteLine("es-tu vraiement sûr de ton choix");
+                    Console.WriteLine("Y/N");
 
                     string validation = Console.ReadLine();
                     
@@ -185,8 +193,12 @@ namespace Project_CS
 
                 if (choice == "5")
                 {
-                    Console.WriteLine("est tu vraiment sur de ton choix");
+                    Console.WriteLine("Vous avez choisi de quitter le menu");
+                    Console.WriteLine("es-tu vraiement sûr de ton choix");
+                    Console.WriteLine("Y/N");
+
                     string validation = Console.ReadLine();
+
                     if(validation == "Y" || validation == "y")
                     {
                         Console.WriteLine("Bon match !!");
@@ -223,7 +235,7 @@ namespace Project_CS
                               "tout les 10 étages il vous rencontrerez un maitre d'etage qui vous \n" +
                               "permettra si vous le battez a acceder a la dizaine d'etages suivante.\n" +
                               "Vous avez le droit de combattre uniquement les maitres d'etages pour \n" +
-                              "monter par dizaines mais les combats seront plus hardus");
+                              "monter par dizaines mais les combats seront plus hardus.");
             Console.ReadLine();
             Console.Clear();
 
@@ -234,18 +246,20 @@ namespace Project_CS
                               "Vie : 100        Vie : 100           Vie : 125 \n"+
                               "Force : 12       Force : 9           Force : 9 \n"+
                               "Esquive : 15     Esquive : 20        Esquive : 15 \n"+
-                              "Nen : 0          Nen : 0             Nen : 1 ");
+                              "Nen : 0          Nen : 0             Nen : 1 \n"+
+                              "");
 
-
+            
             CharacterChoice();
 
             Console.ReadLine();
             Console.Clear();
-            Console.WriteLine("Laissez moi vous presentez maitre wing .... ");
-            Console.WriteLine("Utlilité du role de wing");
+            Console.WriteLine("Avant toute chose laissez-moi vous présenter maître Wing, son rôle sera de vous accompagner \n"+
+                              "tout au long de votre ascension dans la tour céleste, en vous permettant à la fin de chaque \n"+
+                              "combat d'améliorer différentes compétences en échange de crédit que vous obtiendrez après chaque victoire.");
             Console.ReadLine();
             Console.Clear();
-            Console.WriteLine("proposition du combat");
+            Console.WriteLine("Commençons sans attendre le premier combat");
             
             Console.ReadLine();
             Console.Clear();
@@ -458,35 +472,11 @@ namespace Project_CS
             
             Console.ReadLine();
             Console.Clear();
-            Console.WriteLine("Menu inter combat");
-            Console.ReadLine();
-            Console.Clear();
-
-            if (gon.Health > 1)
-            {
-                Menu(gon);
-            }
-            if (kirua.Health > 1)
-            {
-                Menu(kirua);
-            }
-            if (zushi.Health > 1)
-            {
-                Menu(zushi);
-            }
-
-            
+            Console.WriteLine("Félicitations vous avez réussi à gravir la tour !!!");           
             
         }
     }
 }
-
-
-
-
-
-
-
 
     /* 
     ici c'est le menu ou tu peux t'ammeliorer

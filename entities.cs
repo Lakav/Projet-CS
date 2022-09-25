@@ -68,8 +68,8 @@ namespace Project_CS
         }
         public void printStats()
         {
-            Console.WriteLine($"{Name} a une puissance de {Powerfull}, une esquive de {Dodge}, {Health} poits de vie et" +
-                              $" un Nen a {Nen}");
+            Console.WriteLine($"{Name} à une puissance de {Powerfull}, une esquive de {Dodge}, {Health} poits de vie et" +
+                              $" un Nen à {Nen}");
         }
         
     }
