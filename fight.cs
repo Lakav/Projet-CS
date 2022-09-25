@@ -19,11 +19,12 @@ namespace Project_CS
                 Console.WriteLine("Je vais commencer par prendre votre identiée, qui etes vous?");
                 Console.WriteLine("Pour choisir votre personnage choisissez respectivement : | 1 pour Gon | 2 pour Kirua | 3 pour Zishi | \n"+
                                   "\n"+
-                                  "Gon              Kirua               Zushi \n"+
-                                  "Vie : 100        Vie : 100           Vie : 125 \n"+
-                                  "Force : 12       Force : 9           Force : 9 \n"+
-                                  "Esquive : 15     Esquive : 20        Esquive : 15 \n"+
-                                  "Nen : 0          Nen : 0             Nen : 1 \n"+
+                                  "     Gon             |    Kirua          |     Zushi \n"+
+                                  "     Vie : 100       |    Vie : 100      |     Vie : 125 \n"+
+                                  "     Force : 12      |    Force : 10     |     Force : 9 \n"+
+                                  "     Esquive : 15    |    Esquive : 20   |     Esquive : 15 \n"+
+                                  "     Crit : 5        |    Crit : 8       |     Crit : 5 \n"+
+                                  "     Nen : 0         |    Nen : 0        |     Nen : 1 \n"+
                                   "");
 
 

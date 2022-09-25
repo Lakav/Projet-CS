@@ -11,7 +11,5 @@ namespace Project_CS
             this.Nen = 0;
             this.Crit = 5;
         }
-
     }
-    
 }
