@@ -157,12 +157,14 @@ namespace Project_CS
                 string choice = Console.ReadLine();
                 if (choice == "1")
                 {
-                    Console.Clear();
-                    Console.WriteLine("Vous avez choisi d'améliorer le Nen");
-                    Console.WriteLine("es-tu vraiement sûr de ton choix");
-                    Console.WriteLine("Y/N");
+                    if (ally.Money >= 25000)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Vous avez choisi d'améliorer le Nen");
+                        Console.WriteLine("es-tu vraiement sûr de ton choix");
+                        Console.WriteLine("Y/N");
 
-                    string validation = Console.ReadLine();
+                        string validation = Console.ReadLine();
 
                     if(validation == "Y" || validation == "y")
                     {
@@ -186,14 +188,23 @@ namespace Project_CS
                     {
                         Console.WriteLine("Choix Incompris");
                         Menu(ally);
+                    }  
                     }
+                    else if (ally.Money < 25000)
+                    {
+                        Console.WriteLine("Vous n'avez pas assez d'argent");
+                        Menu(ally);
+                    }
+                    
                 }
 
                 if (choice == "2")
                 {
-                    Console.WriteLine("Vous avez choisi d'améliorer votre force");
-                    Console.WriteLine("es-tu vraiement sûr de ton choix");
-                    Console.WriteLine("Y/N");
+                    if (ally.Money >= 55000)
+                    {
+                        Console.WriteLine("Vous avez choisi d'améliorer votre force");
+                        Console.WriteLine("es-tu vraiement sûr de ton choix");
+                        Console.WriteLine("Y/N");
 
                     string validation = Console.ReadLine();
 
@@ -216,15 +227,24 @@ namespace Project_CS
                         Console.WriteLine("Choix Incompris");
                         Menu(ally);
                     }
+                    }
+                    else if (ally.Money < 55000)
+                    {
+                        Console.WriteLine("Vous n'avez pas assez d'argent");
+                        Menu(ally);
+                    }
+                    
                 }
 
                     
 
                 if (choice == "3")
                 {
-                    Console.WriteLine("Vous avez choisi d'améliorer votre esquive");
-                    Console.WriteLine("es-tu vraiement sûr de ton choix");
-                    Console.WriteLine("Y/N");
+                    if (ally.Money >= 22000)
+                    {
+                        Console.WriteLine("Vous avez choisi d'améliorer votre esquive");
+                        Console.WriteLine("es-tu vraiement sûr de ton choix");
+                        Console.WriteLine("Y/N");
 
                     string validation = Console.ReadLine();
 
@@ -246,24 +266,30 @@ namespace Project_CS
                         Console.WriteLine("Choix Incompris");
                         Menu(ally);
                     }
-
-                   
+                    }
+                    else if (ally.Money < 22000)
+                    {
+                        Console.WriteLine("Vous n'avez pas assez d'argent");
+                        Menu(ally);
+                    }
                 }
 
                 if (choice == "4")
                 {
-                    Console.WriteLine("Vous avez choisi d'améliorer vos coups critique");
-                    Console.WriteLine("es-tu vraiement sûr de ton choix");
-                    Console.WriteLine("Y/N");
+                    if(ally.Money >= 18000)
+                    {
+                        Console.WriteLine("Vous avez choisi d'améliorer vos coups critique");
+                        Console.WriteLine("es-tu vraiement sûr de ton choix");
+                        Console.WriteLine("Y/N");
 
                     string validation = Console.ReadLine();
                     
                     if(validation == "Y" || validation == "y")
                     {
-                    ally.Crit += 15;
-                    ally.Money -= 18000;
-                    Console.WriteLine($"Il vous reste {ally.Money}");
-                    Menu(ally);
+                        ally.Crit += 15;
+                        ally.Money -= 18000;
+                        Console.WriteLine($"Il vous reste {ally.Money}");
+                        Menu(ally);
                     }
 
                     if(validation == "N" || validation == "n")
@@ -276,6 +302,13 @@ namespace Project_CS
                         Console.WriteLine("Choix Incompris");
                         Menu(ally);
                     }
+                    }
+                    else if (ally.Money < 18000)
+                    {
+                        Console.WriteLine("Vous n'avez pas assez d'argent");
+                        Menu(ally);
+                    }
+                    
                 }
 
                 if (choice == "5")
