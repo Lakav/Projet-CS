@@ -152,9 +152,9 @@ namespace Project_CS
                 Console.WriteLine("Bienvenue au centre d'entrainement du professeur Wing\n"+
                                   "ici vous allez pouvoir dépenser l'argent dans des entrainements pour améliorer vos " +
                                   "compétences.");
-                Console.WriteLine($"Tapez le chiffre respectif aux choix que vous souhaitez.\n" +
-                                  "\n" +
-                                  "\n" +
+                Console.WriteLine($"Tapez le chiffre respectif aux choix que vous souhaitez.\n");
+                ally.printStats();
+                Console.WriteLine("\n" +
                                   "    Nen : 1    |   Force : 2    |    Dodge : 3    |    Crit : 4\n" +
                                   "    25 000C    |    55 000C     |     22 000C     |    18 000C\n" +
                                   "               |                |                 |              \n" +
