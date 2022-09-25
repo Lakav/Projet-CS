@@ -113,8 +113,9 @@ namespace Project_CS
             
             void Startfight(Ally ally , Ennemies ennemy)
             {
-                
+                Console.Clear();
                 Console.WriteLine($"THE FIGHT START : {ally.Name} VS {ennemy.Name}");
+                Console.ReadLine();
                 while (ally.Health > 0 && ennemy.Health > 0)
                 {
                     ally.AllyAttack(ally , ennemy);
@@ -128,8 +129,8 @@ namespace Project_CS
                 }
                 else if (ennemy.Health >0)
                 {
-                    Console.WriteLine("you loose ...\n" +
-                                      "restart for a new game");
+                    Console.WriteLine("GAME OVER !!!");
+                                      
                     Environment.Exit(0);
                 }
             }
@@ -156,6 +157,7 @@ namespace Project_CS
                 string choice = Console.ReadLine();
                 if (choice == "1")
                 {
+                    Console.Clear();
                     Console.WriteLine("Vous avez choisi d'améliorer le Nen");
                     Console.WriteLine("es-tu vraiement sûr de ton choix");
                     Console.WriteLine("Y/N");

@@ -47,7 +47,6 @@ namespace Project_CS
                         {
 
                             Console.WriteLine("You'r dead...");
-                            Environment.Exit(0);
                         }
 
                         Powerfull /= 2;
@@ -69,7 +68,6 @@ namespace Project_CS
                         {
 
                             Console.WriteLine("You'r dead...");
-                            Environment.Exit(0);
                         }
 
                         Console.ReadLine();

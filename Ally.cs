@@ -65,7 +65,7 @@ namespace Project_CS
                         int HR = hRange.Next(min, max);
                         Console.WriteLine($"- {HR} HP!");
                         ennemy.Health -= HR;
-                        Console.WriteLine($"{ennemy.Name} is {ennemy.Health} remaining");
+                        Console.WriteLine($"{ennemy.Name} is {ennemy.Health} HP remaining");
                         if (ennemy.Health <= 0)
                         {
 
