@@ -1,4 +1,5 @@
 using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Project_CS
 {
@@ -71,6 +72,11 @@ namespace Project_CS
                 }
             }
 
+            void menu(Ally ally)
+            {
+                
+            }
+
             Console.Clear();
 
             Console.WriteLine("Bienvenue dans la tour Celeste, il y a un total de 50 etages ici, \n" +
@@ -112,19 +118,25 @@ namespace Project_CS
             {
                 Startfight(gon , guido);
                 gon.Heal(gon);
+                gon.printStats();
 
             }
             if (kirua.Health > 1)
             {
                 Startfight(kirua , guido);
                 kirua.Heal(kirua);
+                kirua.printStats();
 
             }
             if (zushi.Health > 1)
             {
                 Startfight(zushi , guido);
                 zushi.Heal(zushi);
+                zushi.printStats();
             }
+            
+            
+            
             Console.ReadLine();
             Console.Clear();
             Console.WriteLine("menu inter combat");
