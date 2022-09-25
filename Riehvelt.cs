@@ -11,6 +11,8 @@ namespace Project_CS
             this.Dodge = 10;
             this.Health = 85;
             this.Nen = 2;
+            this.Crit = 10;
+
         }
     }
 }
