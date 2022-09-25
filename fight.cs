@@ -16,13 +16,13 @@ namespace Project_CS
 
             void CharacterChoice()
             {
-                Console.WriteLine("Je vais commencer par prendre votre identiée, qui etes vous?");
-                Console.WriteLine("Pour choisir votre personnage choisissez respectivement : | 1 pour Gon | 2 pour Kirua | 3 pour Zishi | \n"+
+                Console.WriteLine("I will start by taking your identity, who are you ?");
+                Console.WriteLine("To choose your character choose respectively : | 1 for Gon | 2 for Kirua | 3 for Zushi | \n"+
                                   "\n"+
                                   "     Gon             |    Kirua          |     Zushi \n"+
-                                  "     Vie : 100       |    Vie : 100      |     Vie : 125 \n"+
-                                  "     Force : 12      |    Force : 10     |     Force : 9 \n"+
-                                  "     Esquive : 15    |    Esquive : 20   |     Esquive : 15 \n"+
+                                  "     Life : 100      |    Life : 100     |     Life : 125 \n"+
+                                  "     Damage : 12     |    Damage : 10    |     Damage : 9 \n"+
+                                  "     Dodge  : 15     |    Dodge  : 20    |     Dodge  : 15 \n"+
                                   "     Crit : 5        |    Crit : 8       |     Crit : 5 \n"+
                                   "     Nen : 0         |    Nen : 0        |     Nen : 1 \n"+
                                   "");
@@ -34,8 +34,8 @@ namespace Project_CS
                 {
                     case ("1") :
                         
-                    Console.WriteLine("Vous avez choisi Gon");
-                    Console.WriteLine("es-tu vraiement sûr de ton choix");
+                    Console.WriteLine("You have chosen Gon");
+                    Console.WriteLine("Are you really sure of your choice ?");
                     Console.WriteLine("Y/N");
 
                     string validation = Console.ReadLine();
@@ -49,12 +49,12 @@ namespace Project_CS
 
                     if(validation == "N" || validation == "n")
                     {
-                        Console.WriteLine("Choix annulé");
+                        Console.WriteLine("Choice cancelled");
                         CharacterChoice();
                     }
                     else if(validation != "Y" && validation != "y" && validation != "N" && validation != "n") 
                     {
-                        Console.WriteLine("Choix Incompris");
+                        Console.WriteLine("Misunderstood Choice");
                         CharacterChoice();
                     }
                     break;
@@ -62,8 +62,8 @@ namespace Project_CS
                     
                     case ("2") : 
                         
-                    Console.WriteLine("Vous avez choisi Kirua");
-                    Console.WriteLine("es-tu vraiement sûr de ton choix");
+                    Console.WriteLine("You have chosen Kirua");
+                    Console.WriteLine("Are you really sure of your choice ?");
                     Console.WriteLine("Y/N");
 
                     string validation2 = Console.ReadLine();
@@ -77,20 +77,20 @@ namespace Project_CS
 
                     if(validation2 == "N" || validation2 == "n")
                     {
-                        Console.WriteLine("Choix annulé");
+                        Console.WriteLine("Choice cancelled");
                         CharacterChoice();
                     }
                     else if(validation2 != "Y" && validation2 != "y" && validation2 != "N" && validation2 != "n") 
                     {
-                        Console.WriteLine("Choix Incompris");
+                        Console.WriteLine("Misunderstood Choice");
                         CharacterChoice();
                     }
                     break;
                     
                     case ("3"):
                         
-                    Console.WriteLine("Vous avez choisi Zushi");
-                    Console.WriteLine("es-tu vraiement sûr de ton choix");
+                    Console.WriteLine("You have chosen Zushi");
+                    Console.WriteLine("Are you really sure of your choice ?");
                     Console.WriteLine("Y/N");
 
                     string validation3 = Console.ReadLine();
@@ -104,19 +104,19 @@ namespace Project_CS
 
                     if(validation3 == "N" || validation3 == "n")
                     {
-                        Console.WriteLine("Choix annulé");
+                        Console.WriteLine("Choice cancelled");
                         CharacterChoice();
                     }
                     else if(validation3 != "Y" && validation3 != "y" && validation3 != "N" && validation3 != "n") 
                     {
-                        Console.WriteLine("Choix Incompris");
+                        Console.WriteLine("Misunderstood Choice");
                         CharacterChoice();
                     }
                     break;
                 
                     default:
                         
-                        Console.WriteLine("La selection n'est pas bonne.");
+                        Console.WriteLine("The selection is not good");
                         Console.Clear();
                         CharacterChoice();
                         break;
@@ -150,17 +150,17 @@ namespace Project_CS
             void Menu(Ally ally)
             {
                 Console.Clear();
-                Console.WriteLine("Bienvenue au centre d'entrainement du professeur Wing\n"+
-                                  "ici vous allez pouvoir dépenser l'argent dans des entrainements pour améliorer vos " +
-                                  "compétences.");
-                Console.WriteLine($"Tapez le chiffre respectif aux choix que vous souhaitez.\n");
+                Console.WriteLine("Welcome to Professor Wing's training centre\n"+
+                                  "here you will be able to spend the money on training to improve your " +
+                                  "Skills.");
+                Console.WriteLine($"Type in the respective number for the choices you want.\n");
                 ally.printStats();
                 Console.WriteLine("\n" +
-                                  "    Nen : 1    |   Force : 2    |    Dodge : 3    |    Crit : 4\n" +
+                                  "    Nen : 1    |   D : 2    |    Dodge : 3    |    Crit : 4\n" +
                                   "    25 000C    |    55 000C     |     22 000C     |    18 000C\n" +
                                   "               |                |                 |              \n" +
-                                  "    PDV + 25   |    Force x2    |    Dodge +10    |    Crit +15\n" +
-                                  "    Force +10  |                |                 |\n" +
+                                  "    HP + 25    |    Damage x2   |    Dodge +10    |    Crit +15\n" +
+                                  "    Damage +10 |                |                 |\n" +
                                   "    Dodge +3   |                |                 |\n" +
                                   "    Crit +5    |                |                 |\n" +
                                   "\n" +
@@ -172,8 +172,8 @@ namespace Project_CS
                     if (ally.Money >= 25000)
                     {
                         Console.Clear();
-                        Console.WriteLine("Vous avez choisi d'améliorer le Nen");
-                        Console.WriteLine("es-tu vraiement sûr de ton choix");
+                        Console.WriteLine("You have chosen to improve the Nen");
+                        Console.WriteLine("Are you really sure of your choice ?");
                         Console.WriteLine("Y/N");
 
                         string validation = Console.ReadLine();
@@ -186,25 +186,25 @@ namespace Project_CS
                         ally.Crit += 5;
                         ally.Nen += 1;
                         ally.Money -= 25000;
-                        Console.WriteLine($"Il vous reste {ally.Money}");
+                        Console.WriteLine($"You ave {ally.Money} left");
                         ally.printStats();
                         Menu(ally); 
                     }
 
                     if(validation == "N" || validation == "n")
                     {
-                        Console.WriteLine("Choix annulé");
+                        Console.WriteLine("Choice cancelled");
                         Menu(ally);
                     }
                     else if(validation != "Y" && validation != "y" && validation != "N" && validation != "n") 
                     {
-                        Console.WriteLine("Choix Incompris");
+                        Console.WriteLine("Misunderstood Choice");
                         Menu(ally);
                     }  
                     }
                     else if (ally.Money < 25000)
                     {
-                        Console.WriteLine("Vous n'avez pas assez d'argent");
+                        Console.WriteLine("You don't have enough money");
                         Menu(ally);
                     }
                     
@@ -214,8 +214,8 @@ namespace Project_CS
                 {
                     if (ally.Money >= 55000)
                     {
-                        Console.WriteLine("Vous avez choisi d'améliorer votre force");
-                        Console.WriteLine("es-tu vraiement sûr de ton choix");
+                        Console.WriteLine("You have chosen to improve your damage");
+                        Console.WriteLine("are you really sure of your choice ?");
                         Console.WriteLine("Y/N");
 
                     string validation = Console.ReadLine();
@@ -224,25 +224,25 @@ namespace Project_CS
                     {
                         ally.Powerfull *= 2;
                         ally.Money -= 55000;
-                        Console.WriteLine($"Il vous reste {ally.Money}");
+                        Console.WriteLine($"You ave {ally.Money} left");
                         ally.printStats();
                         Menu(ally);
                     }
 
                     if(validation == "N" || validation == "n")
                     {
-                        Console.WriteLine("Choix annulé");
+                        Console.WriteLine("Choice cancelled");
                         Menu(ally);
                     }
                     else if(validation != "Y" && validation != "y" && validation != "N" && validation != "n") 
                     {
-                        Console.WriteLine("Choix Incompris");
+                        Console.WriteLine("Misunderstood Choice");
                         Menu(ally);
                     }
                     }
                     else if (ally.Money < 55000)
                     {
-                        Console.WriteLine("Vous n'avez pas assez d'argent");
+                        Console.WriteLine("You don't have enough money");
                         Menu(ally);
                     }
                     
@@ -254,8 +254,8 @@ namespace Project_CS
                 {
                     if (ally.Money >= 22000)
                     {
-                        Console.WriteLine("Vous avez choisi d'améliorer votre esquive");
-                        Console.WriteLine("es-tu vraiement sûr de ton choix");
+                        Console.WriteLine("You have chosen to improve your dodge");
+                        Console.WriteLine("are you really sure of your choice ?");
                         Console.WriteLine("Y/N");
 
                     string validation = Console.ReadLine();
@@ -264,24 +264,24 @@ namespace Project_CS
                     { 
                         ally.Dodge += 10;
                         ally.Money -= 22000;
-                        Console.WriteLine($"Il vous reste {ally.Money}");
+                        Console.WriteLine($"You ave {ally.Money} left");
                         Menu(ally);
                     }
 
                     if(validation == "N" || validation == "n")
                     {
-                        Console.WriteLine("Choix annulé");
+                        Console.WriteLine("Choice cancelled");
                         Menu(ally);
                     }
                     else if(validation != "Y" && validation != "y" && validation != "N" && validation != "n") 
                     {
-                        Console.WriteLine("Choix Incompris");
+                        Console.WriteLine("Misunderstood Choice");
                         Menu(ally);
                     }
                     }
                     else if (ally.Money < 22000)
                     {
-                        Console.WriteLine("Vous n'avez pas assez d'argent");
+                        Console.WriteLine("You don't have enough money");
                         Menu(ally);
                     }
                 }
@@ -290,8 +290,8 @@ namespace Project_CS
                 {
                     if(ally.Money >= 18000)
                     {
-                        Console.WriteLine("Vous avez choisi d'améliorer vos coups critique");
-                        Console.WriteLine("es-tu vraiement sûr de ton choix");
+                        Console.WriteLine("You have chosen to improve your critical hits");
+                        Console.WriteLine("Are you really sure of your choice ?");
                         Console.WriteLine("Y/N");
 
                     string validation = Console.ReadLine();
@@ -300,24 +300,24 @@ namespace Project_CS
                     {
                         ally.Crit += 15;
                         ally.Money -= 18000;
-                        Console.WriteLine($"Il vous reste {ally.Money}");
+                        Console.WriteLine($"You ave {ally.Money} left");
                         Menu(ally);
                     }
 
                     if(validation == "N" || validation == "n")
                     {
-                        Console.WriteLine("Choix annulé");
+                        Console.WriteLine("Choice cancelled");
                         Menu(ally);
                     }
                     else if(validation != "Y" && validation != "y" && validation != "N" && validation != "n")
                     {
-                        Console.WriteLine("Choix Incompris");
+                        Console.WriteLine("Misunderstood Choice");
                         Menu(ally);
                     }
                     }
                     else if (ally.Money < 18000)
                     {
-                        Console.WriteLine("Vous n'avez pas assez d'argent");
+                        Console.WriteLine("You don't have enough money");
                         Menu(ally);
                     }
                     
@@ -325,30 +325,30 @@ namespace Project_CS
 
                 if (choice == "5")
                 {
-                    Console.WriteLine("Vous avez choisi de quitter le menu");
-                    Console.WriteLine("es-tu vraiement sûr de ton choix");
+                    Console.WriteLine("You have chosen to leave the Menu");
+                    Console.WriteLine("Are you really sure of your choice ?");
                     Console.WriteLine("Y/N");
 
                     string validation = Console.ReadLine();
 
                     if(validation == "Y" || validation == "y")
                     {
-                        Console.WriteLine("Bon match !!");
+                        Console.WriteLine("Good game !!");
                     }
                     if(validation == "N" || validation == "n")
                     {
-                        Console.WriteLine("Choix annulé");
+                        Console.WriteLine("Choice cancelled");
                         Menu(ally);
                     }
                     else if(validation != "Y" && validation != "y" && validation != "N" && validation != "n")
                     {
-                        Console.WriteLine("Choix Incompris");
+                        Console.WriteLine("Misunderstood Choice");
                         Menu(ally);
                     }
                 }
                 else if(choice != "1" && choice != "2" && choice != "3" && choice != "4" && choice != "5")
                 {
-                    Console.WriteLine("Choix Incompris");
+                    Console.WriteLine("Misunderstood Choice");
                     Menu(ally); 
                 }
 
@@ -357,11 +357,10 @@ namespace Project_CS
 
             Console.Clear();
 
-            Console.WriteLine("Bienvenue dans la tour Celeste, il y a un total de 50 etages ici, \n" +
-                              "tout les 10 étages il vous rencontrerez un maitre d'etage qui vous \n" +
-                              "permettra si vous le battez a acceder a la dizaine d'etages suivante.\n" +
-                              "Vous avez le droit de combattre uniquement les maitres d'etages pour \n" +
-                              "monter par dizaines mais les combats seront plus hardus.");
+            Console.WriteLine("Welcome to the Celestial Tower, there are a total of 50 floors here,\n" +
+                              "every 10 floors you will meet a floor master who will allow you if you beat him to access the next ten floors.\n" +
+                              "You are allowed to fight only the floor masters to get up to the next ten floors but the fights will be more difficult.");
+                              
             Console.ReadLine();
             Console.Clear();
 
@@ -370,12 +369,12 @@ namespace Project_CS
 
             Console.ReadLine();
             Console.Clear();
-            Console.WriteLine("Avant toute chose laissez-moi vous présenter maître Wing, son rôle sera de vous accompagner \n"+
-                              "tout au long de votre ascension dans la tour céleste, en vous permettant à la fin de chaque \n"+
-                              "combat d'améliorer différentes compétences en échange de crédit que vous obtiendrez après chaque victoire.");
+            Console.WriteLine("First of all let me introduce you to Master Wing, his role will be to accompany you \n"+
+                              "throughout your ascent in the celestial tower, allowing you at the end of each \n"+
+                              "fight to improve different skills in exchange for credits that you will get after each victory.");
             Console.ReadLine();
             Console.Clear();
-            Console.WriteLine("Commençons sans attendre le premier combat");
+            Console.WriteLine("Let's start the first fight without waiting !");
             
             Console.ReadLine();
             Console.Clear();
@@ -389,8 +388,8 @@ namespace Project_CS
                 Startfight(gon , guido);
                 gon.Heal(gon);
                 gon.Money += 30000;
-                Console.WriteLine("Vous recevez 30 000 crédit");
-                Console.WriteLine($"Vous avez {gon.Money} crédit dans votre portfeuille");
+                Console.WriteLine("You receive 30 000 credits");
+                Console.WriteLine($"You have {gon.Money} credits in your portfolio");
 
             }
             if (kirua.Health > 1)
@@ -398,8 +397,8 @@ namespace Project_CS
                 Startfight(kirua , guido);
                 kirua.Heal(kirua);
                 kirua.Money += 30000;
-                Console.WriteLine("Vous recevez 30 000 crédit");
-                Console.WriteLine($"Vous avez {kirua.Money} crédit dans votre portfeuille");
+                Console.WriteLine("You receive 30 000 credits");
+                Console.WriteLine($"You have {kirua.Money} credits in your portfolio");
 
             }
             if (zushi.Health > 1)
@@ -407,8 +406,8 @@ namespace Project_CS
                 Startfight(zushi , guido);
                 zushi.Heal(zushi);
                 zushi.Money += 30000;
-                Console.WriteLine("Vous recevez 30 000 crédit");
-                Console.WriteLine($"Vous avez {zushi.Money} crédit dans votre portfeuille");
+                Console.WriteLine("You receive 30 000 credits");
+                Console.WriteLine($"You have {zushi.Money} credits in your portfolio");
             }
             
             Console.ReadLine();
@@ -437,8 +436,8 @@ namespace Project_CS
                 Startfight(gon , riehvelt);
                 gon.Heal(gon);
                 gon.Money += 30000;
-                Console.WriteLine("Vous recevez 30 000 crédit");
-                Console.WriteLine($"Vous avez {gon.Money} crédit dans votre portfeuille");
+                Console.WriteLine("You receive 30 000 credits");
+                Console.WriteLine($"You have {gon.Money} credits in your portfolio");
 
             }
             if (kirua.Health > 1)
@@ -446,8 +445,8 @@ namespace Project_CS
                 Startfight(kirua , riehvelt);
                 kirua.Heal(kirua);
                 kirua.Money += 30000;
-                Console.WriteLine("Vous recevez 30 000 crédit");
-                Console.WriteLine($"Vous avez {kirua.Money} crédit dans votre portfeuille");
+                Console.WriteLine("You receive 30 000 credits");
+                Console.WriteLine($"You have {kirua.Money} credits in your portfolio");
 
             }
             if (zushi.Health > 1)
@@ -455,8 +454,8 @@ namespace Project_CS
                 Startfight(zushi , riehvelt);
                 zushi.Heal(zushi);
                 zushi.Money += 30000;
-                Console.WriteLine("Vous recevez 30 000 crédit");
-                Console.WriteLine($"Vous avez {zushi.Money} crédit dans votre portfeuille");
+                Console.WriteLine("You receive 30 000 credits");
+                Console.WriteLine($"You have {zushi.Money} credits in your portfolio");
             }
 
 
@@ -487,8 +486,8 @@ namespace Project_CS
                 Startfight(gon , kastrot);
                 gon.Heal(gon);
                 gon.Money += 30000;
-                Console.WriteLine("Vous recevez 30 000 crédit");
-                Console.WriteLine($"Vous avez {gon.Money} crédit dans votre portfeuille");
+                Console.WriteLine("You receive 30 000 credits");
+                Console.WriteLine($"You have {gon.Money} credits in your portfolio");
 
             }
             if (kirua.Health > 1)
@@ -496,8 +495,8 @@ namespace Project_CS
                 Startfight(kirua , kastrot);
                 kirua.Heal(kirua);
                 kirua.Money += 30000;
-                Console.WriteLine("Vous recevez 30 000 crédit");
-                Console.WriteLine($"Vous avez {kirua.Money} crédit dans votre portfeuille");
+                Console.WriteLine("You receive 30 000 credits");
+                Console.WriteLine($"You have {kirua.Money} credits in your portfolio");
 
             }
             if (zushi.Health > 1)
@@ -505,8 +504,8 @@ namespace Project_CS
                 Startfight(zushi , kastrot);
                 zushi.Heal(zushi);
                 zushi.Money += 30000;
-                Console.WriteLine("Vous recevez 30 000 crédit");
-                Console.WriteLine($"Vous avez {zushi.Money} crédit dans votre portfeuille");
+                Console.WriteLine("You receive 30 000 credits");
+                Console.WriteLine($"You have {zushi.Money} credits in your portfolio");
             }
             
             Console.ReadLine();
@@ -535,16 +534,16 @@ namespace Project_CS
                 Startfight(gon , kuroro);
                 gon.Heal(gon);
                 gon.Money += 30000;
-                Console.WriteLine("Vous recevez 30 000 crédit");
-                Console.WriteLine($"Vous avez {gon.Money} crédit dans votre portfeuille");
+                Console.WriteLine("You receive 30 000 credits");
+                Console.WriteLine($"You have {gon.Money} credits in your portfolio");
             }
             if (kirua.Health > 1)
             {
                 Startfight(kirua , kuroro);
                 kirua.Heal(kirua);
                 kirua.Money += 30000;
-                Console.WriteLine("Vous recevez 30 000 crédit");
-                Console.WriteLine($"Vous avez {kirua.Money} crédit dans votre portfeuille");
+                Console.WriteLine("You receive 30 000 credits");
+                Console.WriteLine($"You have {kirua.Money} credits in your portfolio");
 
             }
             if (zushi.Health > 1)
@@ -552,8 +551,8 @@ namespace Project_CS
                 Startfight(zushi , kuroro);
                 zushi.Heal(zushi);
                 zushi.Money += 30000;
-                Console.WriteLine("Vous recevez 30 000 crédit");
-                Console.WriteLine($"Vous avez {zushi.Money} crédit dans votre portfeuille");
+                Console.WriteLine("You receive 30 000 credits");
+                Console.WriteLine($"You have {zushi.Money} credits in your portfolio");
             }
 
 
@@ -583,8 +582,8 @@ namespace Project_CS
                 Startfight(gon , hisoka);
                 gon.Heal(gon);
                 gon.Money += 30000;
-                Console.WriteLine("Vous recevez 30 000 crédit");
-                Console.WriteLine($"Vous avez {kirua.Money} crédit dans votre portfeuille");
+                Console.WriteLine("You receive 30 000 credits");
+                Console.WriteLine($"You have {gon.Money} credits in your portfolio");
         
 
             }
@@ -593,8 +592,8 @@ namespace Project_CS
                 Startfight(kirua , hisoka);
                 kirua.Heal(kirua);
                 kirua.Money += 30000;
-                Console.WriteLine("Vous recevez 30 000 crédit");
-                Console.WriteLine($"Vous avez {kirua.Money} crédit dans votre portfeuille");
+                Console.WriteLine("You receive 30 000 credits");
+                Console.WriteLine($"You have {kirua.Money} credits in your portfolio");
 
             }
             if (zushi.Health > 1)
@@ -602,14 +601,14 @@ namespace Project_CS
                 Startfight(zushi , hisoka);
                 zushi.Heal(zushi);
                 zushi.Money += 30000;
-                Console.WriteLine("Vous recevez 30 000 crédit");
-                Console.WriteLine($"Vous avez {zushi.Money} crédit dans votre portfeuille");
+                Console.WriteLine("You receive 30 000 credits");
+                Console.WriteLine($"You have {zushi.Money} credits in your portfolio");
             }
 
             
             Console.ReadLine();
             Console.Clear();
-            Console.WriteLine("Félicitations vous avez réussi à gravir la tour !!!");           
+            Console.WriteLine("Congratulations you have successfully climbed the tower!!!");           
             
         }
     }
