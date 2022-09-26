@@ -156,7 +156,7 @@ namespace Project_CS
                 Console.WriteLine($"Type in the respective number for the choices you want.\n");
                 ally.printStats();
                 Console.WriteLine("\n" +
-                                  "    Nen : 1    |   D : 2    |    Dodge : 3    |    Crit : 4\n" +
+                                  "    Nen : 1    |   Damage : 2   |    Dodge : 3    |    Crit : 4\n" +
                                   "    25 000C    |    55 000C     |     22 000C     |    18 000C\n" +
                                   "               |                |                 |              \n" +
                                   "    HP + 25    |    Damage x2   |    Dodge +10    |    Crit +15\n" +
@@ -194,17 +194,20 @@ namespace Project_CS
                     if(validation == "N" || validation == "n")
                     {
                         Console.WriteLine("Choice cancelled");
+                        Console.ReadLine();
                         Menu(ally);
                     }
                     else if(validation != "Y" && validation != "y" && validation != "N" && validation != "n") 
                     {
                         Console.WriteLine("Misunderstood Choice");
+                        Console.ReadLine();
                         Menu(ally);
                     }  
                     }
                     else if (ally.Money < 25000)
                     {
                         Console.WriteLine("You don't have enough money");
+                        Console.ReadLine();
                         Menu(ally);
                     }
                     
@@ -232,17 +235,20 @@ namespace Project_CS
                     if(validation == "N" || validation == "n")
                     {
                         Console.WriteLine("Choice cancelled");
+                        Console.ReadLine();
                         Menu(ally);
                     }
                     else if(validation != "Y" && validation != "y" && validation != "N" && validation != "n") 
                     {
                         Console.WriteLine("Misunderstood Choice");
+                        Console.ReadLine();
                         Menu(ally);
                     }
                     }
                     else if (ally.Money < 55000)
                     {
                         Console.WriteLine("You don't have enough money");
+                        Console.ReadLine();
                         Menu(ally);
                     }
                     
@@ -271,17 +277,20 @@ namespace Project_CS
                     if(validation == "N" || validation == "n")
                     {
                         Console.WriteLine("Choice cancelled");
+                        Console.ReadLine();
                         Menu(ally);
                     }
                     else if(validation != "Y" && validation != "y" && validation != "N" && validation != "n") 
                     {
                         Console.WriteLine("Misunderstood Choice");
+                        Console.ReadLine();
                         Menu(ally);
                     }
                     }
                     else if (ally.Money < 22000)
                     {
                         Console.WriteLine("You don't have enough money");
+                        Console.ReadLine();
                         Menu(ally);
                     }
                 }
@@ -307,17 +316,20 @@ namespace Project_CS
                     if(validation == "N" || validation == "n")
                     {
                         Console.WriteLine("Choice cancelled");
+                        Console.ReadLine();
                         Menu(ally);
                     }
                     else if(validation != "Y" && validation != "y" && validation != "N" && validation != "n")
                     {
                         Console.WriteLine("Misunderstood Choice");
+                        Console.ReadLine();
                         Menu(ally);
                     }
                     }
                     else if (ally.Money < 18000)
                     {
                         Console.WriteLine("You don't have enough money");
+                        Console.ReadLine();
                         Menu(ally);
                     }
                     
@@ -338,17 +350,20 @@ namespace Project_CS
                     if(validation == "N" || validation == "n")
                     {
                         Console.WriteLine("Choice cancelled");
+                        Console.ReadLine();
                         Menu(ally);
                     }
                     else if(validation != "Y" && validation != "y" && validation != "N" && validation != "n")
                     {
                         Console.WriteLine("Misunderstood Choice");
+                        Console.ReadLine();
                         Menu(ally);
                     }
                 }
                 else if(choice != "1" && choice != "2" && choice != "3" && choice != "4" && choice != "5")
                 {
                     Console.WriteLine("Misunderstood Choice");
+                    Console.ReadLine();
                     Menu(ally); 
                 }
 
@@ -374,7 +389,7 @@ namespace Project_CS
                               "fight to improve different skills in exchange for credits that you will get after each victory.");
             Console.ReadLine();
             Console.Clear();
-            Console.WriteLine("Let's start the first fight without waiting !");
+            Console.WriteLine("Let's start the first fight immediately !");
             
             Console.ReadLine();
             Console.Clear();

@@ -68,7 +68,7 @@ namespace Project_CS
         }
         public void printStats()
         {
-            Console.WriteLine($"{Name} at a power of {Powerfull}, a dodging chance of {Dodge}%," +
+            Console.WriteLine($"{Name} at a damage of {Powerfull}, a dodging chance of {Dodge}%," +
                               $" a {Crit}% chance of making a critical hit, {Health} life points and" +
                               $" a Nen of {Nen}");
         }
